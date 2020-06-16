@@ -1,0 +1,15 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "css grid layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "imaximciuc",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
