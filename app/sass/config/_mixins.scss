@@ -200,25 +200,3 @@ $experimental: true !default; // set True for support Old Browsers
   animation-duration: $time;
 }
 
-
-/* === Usage of IE11 mixin === */
-/*
-
-@mixin only_ie11($selector, $map){
-  @media all and (-ms-high-contrast:none){
-    *::-ms-backdrop, #{$selector} {
-      @each $property, $value in ($map) {
-        #{$property}: $value+\0;
-      }
-    }
-  }
-}
-
-
-@include only_ie11( '.my_element', (
-  background-color: green,
-  display: flex,
-  margin: 2em
-))
-
-*/

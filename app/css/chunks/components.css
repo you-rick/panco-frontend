@@ -1,0 +1,14 @@
+.site-container {
+  width: 100%;
+  padding: 0 40px; }
+  .site-container:before, .site-container:after {
+    content: "";
+    display: table; }
+  .site-container:after {
+    clear: both; }
+  .site-container:not(.wide) {
+    max-width: 1920px; }
+
+.section-headline {
+  font: 700 1.5rem/1.875rem "Ultima Pro", "Rubik", "Poppins", sans-serif;
+  letter-spacing: -0.02em; }

@@ -1,0 +1,87 @@
+@import "../config/variables";
+@import "../config/mixins";
+
+.site-container {
+  width: 100%;
+  padding: 0 40px;
+  @include clearfix;
+
+  &:not(.wide) {
+    max-width: 1920px;
+  }
+}
+
+.section-headline {
+  font: 700 rem(24px)/rem(30px) $headlineFont;
+  letter-spacing: -0.02em;
+}
+
+.button {
+  &.white {
+    &:hover {
+    }
+  }
+
+  &.purple {
+    &:hover {
+    }
+  }
+
+  &.filled {
+    &:hover {
+    }
+  }
+
+  &.outlined {
+    &:hover {
+
+    }
+  }
+}
+
+
+.featured-item {
+  .title {
+    &.lg {
+    }
+  }
+
+  .subtitle {
+  }
+
+  .button {
+  }
+}
+
+
+// Grid Item
+.grid-item {
+  .img-wrap {
+    .sale {
+    }
+
+    .photo {
+    }
+
+    .save-item {
+      [class*="icon"] {
+      }
+    }
+  }
+
+  .item-info {
+    .title {
+    }
+
+    .type {
+    }
+
+    .price {
+      .old {
+      }
+
+      .new {
+      }
+    }
+  }
+}
