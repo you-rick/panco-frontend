@@ -14,7 +14,7 @@
 
   .navigation {
     display: flex;
-    align-items: center;
+    align-items: stretch;
 
     & > * {
       margin-left: rem(18px);
@@ -22,6 +22,16 @@
   }
 
   .lang {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+
+    &:hover {
+      .dropdown-list {
+        display: block;
+      }
+    }
+
     .lang-toggle {
       display: flex;
       justify-content: center;
@@ -35,6 +45,35 @@
       span {
         font-size: rem(12px);
         line-height: rem(18px);
+      }
+    }
+
+    .dropdown-list {
+      display: none;
+      top: rem(42px);
+      left: 0;
+      z-index: 3;
+      position: absolute;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid $mediumGrey;
+      padding: rem(8px) 0;
+      @include radius(14px);
+
+      li {
+        a {
+          display: block;
+          width: 100%;
+          font-size: rem(12px);
+          line-height: rem(18px);
+          background: #fff;
+          color: #000;
+          padding: rem(4px) rem(22px);
+
+          &:hover {
+            background: #F3F3F3;
+          }
+        }
       }
     }
   }
@@ -61,11 +100,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:hover {
       .cart-dropdown {
         display: block;
       }
     }
+
     .cart-toggle {
       position: relative;
       display: flex;
@@ -355,6 +396,7 @@
   top: rem(118px);
   left: 0;
   padding-bottom: rem(16px);
+
   &.shown {
     display: block;
   }
