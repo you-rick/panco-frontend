@@ -33,7 +33,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   @include radius(64px);
-  font: 400 rem(14px)/1 $baseFont;
+  font: 500 rem(14px)/1 $baseFont;
   letter-spacing: -0.01em;
 
   [class*="icon"] {
@@ -46,7 +46,7 @@ h1, h2, h3 {
   }
 
   &.block {
-    display: block;
+    width: 100%;
   }
 
   &.white {
@@ -187,3 +187,93 @@ h1, h2, h3 {
     }
   }
 }
+
+/* === Slick Slider custom styles === */
+.slick-dots.slick-dots {
+  text-align: right;
+  padding: 0 rem(16px);
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.slick-active {
+      button {
+        &:before {
+          width: 8px;
+          height: 8px;
+          background: $greyText;
+        }
+      }
+    }
+
+    button {
+      width: auto;
+      height: auto;
+      padding: 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        opacity: 1;
+        background: $mediumGrey;
+        @include radius(10px);
+        @include smooth(0.2s);
+      }
+    }
+  }
+}
+
+.slick-slider {
+  .slick-prev,
+  .slick-next {
+    width: rem(52px);
+    height: rem(52px);
+    top: 40%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.75);
+    @include radius(52px);
+    @include shadow((2px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.25)));
+
+    &:before {
+      font-size: rem(16px);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.75);
+
+      &:before {
+        color: $darkGrey;
+        @include smooth(0.2s);
+      }
+    }
+  }
+
+  .slick-prev {
+    left: rem(32px);
+
+    &:before {
+      font-family: 'icomoon' !important;
+      content: "\e918";
+
+      color: $greyText;
+    }
+  }
+
+  .slick-next {
+    right: rem(32px);
+
+    &:before {
+      font-family: 'icomoon' !important;
+      content: "\e917";
+      color: $greyText;
+    }
+  }
+}
+

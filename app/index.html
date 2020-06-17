@@ -38,13 +38,13 @@
                 <div class="cart">
                     <button type="button" class="cart-toggle">
                         <i class="icon-shopping-cart"></i>
-                        <sup class="number">5</sup>
+                        <span class="number">5</span>
                     </button>
                     <div class="cart-dropdown">
                         <ul class="items">
                             <li>
                                 <a href="#" class="item">
-                                    <img src="images/related_item_1.jpg" alt="Img 1">
+                                    <img src="images/cart_1.jpg" alt="Img 1">
                                     <div class="info">
                                         <span class="title">Pieced Multi-Color Sneakers</span>
                                         <span class="size">EU 26 (16.2cm) x1</span>
@@ -57,7 +57,7 @@
                             </li>
                             <li>
                                 <a href="#" class="item">
-                                    <img src="images/related_item_2.jpg" alt="Img 2">
+                                    <img src="images/cart_2.jpg" alt="Img 2">
                                     <div class="info">
                                         <span class="title">Detailed Sneakers</span>
                                         <span class="size">EU 26 (16.2cm) x1</span>
@@ -67,7 +67,7 @@
                             </li>
                             <li>
                                 <a href="#" class="item">
-                                    <img src="images/related_item_3.jpg" alt="Img 3">
+                                    <img src="images/cart_3.jpg" alt="Img 3">
                                     <div class="info">
                                         <span class="title">Mickey Mouse Disney Sneakers</span>
                                         <span class="size">EU 26 (16.2cm) x1</span>
@@ -78,7 +78,7 @@
                         </ul>
                         <!-- /.items -->
                         <p class="items-added">5 items added</p>
-                        <a href="#" class="button purple block lg">View cart</a>
+                        <a href="#" class="button purple block">View cart</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
 
     <header class="main-header">
         <div class="site-container">
-            <div class="inner-wrap">
+            <div class="header-inner-wrap">
                 <a href="#" class="logo">Panco.md</a>
                 <div class="topnav-wrap">
                     <ul class="topnav">
@@ -163,7 +163,7 @@
                                     <!-- /.cols -->
                                     <div class="category-preview">
                                         <span class="title">Age: 3-12 years</span>
-                                        <img src="images/menu_img.jpg" alt="Girls"/>
+                                        <img src="images/combobox_img.jpg" alt="Girls"/>
                                     </div>
                                 </div>
                             </div>
@@ -175,10 +175,13 @@
                     </ul>
                 </div>
                 <!-- /.topnav-wrap -->
-                <button type="button" class="search-toggle">
-                    <i class="icon-search"></i>
-                    <span>Search</span>
-                </button>
+                <div class="search-box">
+                    <button type="button" class="search-toggle">
+                        <i class="icon-search"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+
             </div>
         </div>
     </header>
@@ -190,7 +193,7 @@
                 <fieldset>
                     <input type="text" class="field" placeholder="Search..."/>
                 </fieldset>
-                <button type="button" class="icon-close"></button>
+                <button type="button" class="icon-close search-toggle"></button>
             </form>
         </div>
     </div>
@@ -234,224 +237,423 @@
 
         <section class="items-slider-wrap">
             <h2 class="section-headline">What's New</h2>
-            <div class="item-slider">
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
+            <div class="slider-container">
+                <div class="item-slider">
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
                     </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
                     </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <img src="images/new_item_1.jpg" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">520 MDL</span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
                 </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
-                    </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
-                    </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
-                    </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
-                    </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <img src="images/new_item_1.jpg" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">520 MDL</span>
-                    </div>
-                </div>
-                <!-- /.grid-item -->
             </div>
         </section>
         <!-- /.items-slider-wrap -->
 
         <section class="items-slider-wrap">
             <h2 class="section-headline">Hottest Sales</h2>
-            <div class="item-slider">
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+            <div class="slider-container">
+                <div class="item-slider">
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
-                </div>
-                <!-- /.grid-item -->
-                <div class="grid-item">
-                    <div class="img-wrap">
-                        <span class="sale">-30%</span>
-                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
-                        <button type="button" class="save-item">
-                            <i class="icon-heart-outline"></i>
-                        </button>
-                    </div>
-                    <div class="item-info">
-                        <strong class="title">Denim jacket with shirt collar</strong>
-                        <span class="type">Boys Outerwear</span>
-                        <span class="price">
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
                             <span class="old">520 MDL</span>
                             <span class="new">364 MDL</span>
                         </span>
+                        </div>
                     </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
+                    <div class="grid-item">
+                        <div class="img-wrap">
+                            <span class="sale">-30%</span>
+                            <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
+                            <button type="button" class="save-item">
+                                <i class="icon-heart-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <strong class="title">Denim jacket with shirt collar</strong>
+                            <span class="type">Boys Outerwear</span>
+                            <span class="price">
+                            <span class="old">520 MDL</span>
+                            <span class="new">364 MDL</span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- /.grid-item -->
                 </div>
-                <!-- /.grid-item -->
-
             </div>
+
         </section>
         <!-- /.items-slider-wrap -->
 
-        <section class="newsletter" style="background-image: url('images/newsletter_bg.jpg')">
-            <h3 class="title">SIGN UP FOR OUR NEWSLETTER</h3>
-            <button class="button white filled">Shop</button>
+        <section class="newsletter">
+            <img src="images/newsletter_bg.jpg" alt="Newsletter"/>
+            <div class="inner-wrap">
+                <h3 class="title">SIGN UP FOR OUR NEWSLETTER</h3>
+                <button class="button white filled">Sign up</button>
+            </div>
         </section>
         <!-- /.newsletter -->
 
-        <section class="flex-parent justify-center align-center flex-column mt-2 mb-2">
-            <h5>Latest Info</h5>
-            <p class="mb-1">
-                We share with you the measures and the information about
+        <section class="latest-info-wrap">
+            <h5 class="section-headline">Latest Info</h5>
+            <p class="mb-4 mt-2">
+                We share with you the measures and the information about<br/>
                 the opening of physical stores and your online purchases.
             </p>
-            <button class="button grey filled">Shop</button>
+            <button class="button grey filled">Read more</button>
         </section>
     </div>
 
@@ -515,9 +717,9 @@
                 </div>
             </div>
             <div class="copyright">
-                <a href="#" class="scroll-top">
+                <button class="scroll-top">
                     <i class="icon-arrow-upward"></i>
-                </a>
+                </button>
                 <a href="#">2020 Panco.md</a>
                 <span>&copy; All rights reserved</span>
             </div>
