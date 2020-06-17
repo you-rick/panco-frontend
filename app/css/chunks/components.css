@@ -1,3 +1,10 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ultima Pro", "Poppins", "Rubik", sans-serif; }
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: -0.04em; }
+
 .site-container {
   width: 100%;
   padding: 0 40px; }
@@ -10,5 +17,110 @@
     max-width: 1920px; }
 
 .section-headline {
-  font: 700 1.5rem/1.875rem "Ultima Pro", "Rubik", "Poppins", sans-serif;
+  font: 700 1.5rem/1.875rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
   letter-spacing: -0.02em; }
+
+.button {
+  height: 3.125rem;
+  padding: 0 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 64px;
+  border-radius: 64px;
+  font: 400 0.875rem/1 "Poppins", "Rubik", sans-serif;
+  letter-spacing: -0.01em; }
+  .button [class*="icon"] {
+    margin-right: 0.375rem; }
+  .button.lg {
+    height: 4rem;
+    font-size: 1rem; }
+  .button.block {
+    display: block; }
+  .button.white {
+    background: #fff;
+    color: #65226D; }
+    .button.white:hover {
+      background: rgba(255, 255, 255, 0.75); }
+    .button.white-outlined {
+      background: transparent;
+      border: 2px solid #FFFFFF;
+      color: #fff; }
+      .button.white-outlined:hover {
+        background: #fff;
+        color: #65226D; }
+  .button.purple {
+    background: #65226D;
+    color: #fff; }
+    .button.purple:hover {
+      background: #A349AE; }
+  .button.grey {
+    background: #F3F3F3;
+    color: #65226D; }
+    .button.grey:hover {
+      background: #DDDDDD; }
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-container.col_2 > * {
+    flex: 1 1 50%; }
+  .grid-container.col_3 > * {
+    flex: 1 1 33.33%; }
+  .grid-container.col_4 > * {
+    flex: 1 1 25%; }
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; }
+  .grid-item .img-wrap {
+    display: flex;
+    width: 100%;
+    position: relative; }
+    .grid-item .img-wrap .sale {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 1.25rem;
+      right: -1rem;
+      width: 6.125rem;
+      height: 6rem;
+      padding-top: 0.5rem;
+      font: bold 1.75rem/1 "Ultima Pro", "Poppins", "Rubik", sans-serif;
+      color: #fff;
+      background: url(../images/purple_star.png) no-repeat center;
+      -webkit-background-size: contain;
+      background-size: contain; }
+    .grid-item .img-wrap .photo {
+      width: 100%; }
+    .grid-item .img-wrap .save-item {
+      position: absolute;
+      z-index: 1;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      font-size: 1.25rem;
+      color: #65226D; }
+  .grid-item .item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem; }
+    .grid-item .item-info .title {
+      font: 400 0.875rem/1.3125rem "Poppins", "Rubik", sans-serif; }
+    .grid-item .item-info .type {
+      font: 400 0.75rem/1.125rem "Poppins", "Rubik", sans-serif;
+      color: #9B9B9B; }
+    .grid-item .item-info .price {
+      font: bold 1rem/1.25rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+      margin-top: 0.5rem;
+      color: #65226D;
+      display: flex; }
+      .grid-item .item-info .price .old {
+        text-decoration: line-through;
+        color: #5E5E5E;
+        margin-right: 0.75rem; }
+      .grid-item .item-info .price .new {
+        color: #E3483E; }

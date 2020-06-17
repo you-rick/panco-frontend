@@ -417,3 +417,479 @@ This .scss loop will create "margin helpers" and "padding helpers" for use in yo
 
 .pl-10 {
   padding-left: 5rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ultima Pro", "Poppins", "Rubik", sans-serif; }
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: -0.04em; }
+
+.site-container {
+  width: 100%;
+  padding: 0 40px; }
+  .site-container:before, .site-container:after {
+    content: "";
+    display: table; }
+  .site-container:after {
+    clear: both; }
+  .site-container:not(.wide) {
+    max-width: 1920px; }
+
+.section-headline {
+  font: 700 1.5rem/1.875rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+  letter-spacing: -0.02em; }
+
+.button {
+  height: 3.125rem;
+  padding: 0 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 64px;
+  border-radius: 64px;
+  font: 400 0.875rem/1 "Poppins", "Rubik", sans-serif;
+  letter-spacing: -0.01em; }
+  .button [class*="icon"] {
+    margin-right: 0.375rem; }
+  .button.lg {
+    height: 4rem;
+    font-size: 1rem; }
+  .button.block {
+    display: block; }
+  .button.white {
+    background: #fff;
+    color: #65226D; }
+    .button.white:hover {
+      background: rgba(255, 255, 255, 0.75); }
+    .button.white-outlined {
+      background: transparent;
+      border: 2px solid #FFFFFF;
+      color: #fff; }
+      .button.white-outlined:hover {
+        background: #fff;
+        color: #65226D; }
+  .button.purple {
+    background: #65226D;
+    color: #fff; }
+    .button.purple:hover {
+      background: #A349AE; }
+  .button.grey {
+    background: #F3F3F3;
+    color: #65226D; }
+    .button.grey:hover {
+      background: #DDDDDD; }
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-container.col_2 > * {
+    flex: 1 1 50%; }
+  .grid-container.col_3 > * {
+    flex: 1 1 33.33%; }
+  .grid-container.col_4 > * {
+    flex: 1 1 25%; }
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; }
+  .grid-item .img-wrap {
+    display: flex;
+    width: 100%;
+    position: relative; }
+    .grid-item .img-wrap .sale {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 1.25rem;
+      right: -1rem;
+      width: 6.125rem;
+      height: 6rem;
+      padding-top: 0.5rem;
+      font: bold 1.75rem/1 "Ultima Pro", "Poppins", "Rubik", sans-serif;
+      color: #fff;
+      background: url(../images/purple_star.png) no-repeat center;
+      -webkit-background-size: contain;
+      background-size: contain; }
+    .grid-item .img-wrap .photo {
+      width: 100%; }
+    .grid-item .img-wrap .save-item {
+      position: absolute;
+      z-index: 1;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      font-size: 1.25rem;
+      color: #65226D; }
+  .grid-item .item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem; }
+    .grid-item .item-info .title {
+      font: 400 0.875rem/1.3125rem "Poppins", "Rubik", sans-serif; }
+    .grid-item .item-info .type {
+      font: 400 0.75rem/1.125rem "Poppins", "Rubik", sans-serif;
+      color: #9B9B9B; }
+    .grid-item .item-info .price {
+      font: bold 1rem/1.25rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+      margin-top: 0.5rem;
+      color: #65226D;
+      display: flex; }
+      .grid-item .item-info .price .old {
+        text-decoration: line-through;
+        color: #5E5E5E;
+        margin-right: 0.75rem; }
+      .grid-item .item-info .price .new {
+        color: #E3483E; }
+
+/* ============ Header ============ */
+.topbar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .topbar .navigation {
+    display: flex; }
+    .topbar .navigation > * {
+      margin-left: 1.125rem; }
+  .topbar .lang .lang-toggle [class*="icon"] {
+    font-size: 0.75rem;
+    color: #65226D; }
+  .topbar .lang .lang-toggle span {
+    font-size: 0.75rem;
+    line-height: 1.125rem; }
+  .topbar .navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .topbar .navlink [class*="icon"] {
+      font-size: 1.25rem;
+      color: #65226D; }
+    .topbar .navlink span {
+      color: #000;
+      font-size: 0.75rem;
+      line-height: 1.125rem; }
+  .topbar .cart .cart-toggle {
+    position: relative; }
+    .topbar .cart .cart-toggle [class*="icon"] {
+      font-size: 1.25rem;
+      color: #65226D; }
+    .topbar .cart .cart-toggle .number {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #E3483E;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.625rem;
+      color: #fff; }
+  .topbar .cart .cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    border: 1px solid #DDDDDD;
+    border-top: 0;
+    padding: 1.25rem; }
+    .topbar .cart .cart-dropdown .items .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.875rem; }
+      .topbar .cart .cart-dropdown .items .item img {
+        width: 6rem; }
+      .topbar .cart .cart-dropdown .items .item .info {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem; }
+        .topbar .cart .cart-dropdown .items .item .info .title {
+          line-height: 1.125rem; }
+        .topbar .cart .cart-dropdown .items .item .info .size {
+          line-height: 1.125rem;
+          color: #9B9B9B; }
+        .topbar .cart .cart-dropdown .items .item .info .price {
+          display: flex;
+          line-height: 1.125rem;
+          font: bold 0.75rem/0.9375rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+          color: #65226D; }
+          .topbar .cart .cart-dropdown .items .item .info .price .new {
+            color: #E3483E; }
+          .topbar .cart .cart-dropdown .items .item .info .price .old {
+            text-decoration: line-through;
+            color: #5E5E5E;
+            margin-right: 0.75rem; }
+    .topbar .cart .cart-dropdown .items-added {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      color: #5E5E5E; }
+
+.main-header {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #DDDDDD; }
+  .main-header .inner-wrap {
+    height: 4.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .main-header .logo {
+    font: 900 1.6875rem/2.0625rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+    color: #65226D;
+    text-transform: uppercase; }
+  .main-header .topnav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-header .topnav > li {
+      padding: 0 1.8125rem; }
+      .main-header .topnav > li > a {
+        font: bold 0.875rem/1.0625rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+        color: #000;
+        text-transform: uppercase; }
+        .main-header .topnav > li > a:hover {
+          color: #65226D; }
+      .main-header .topnav > li.with-dropdown:hover .combobox {
+        display: block; }
+  .main-header .search-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main-header .search-toggle [class*="icon"] {
+      margin-right: 0.5rem;
+      font-size: 1.25rem;
+      color: #65226D; }
+    .main-header .search-toggle span {
+      font-size: 0.75rem;
+      line-height: 1.125rem; }
+
+.combobox {
+  display: none;
+  position: absolute;
+  top: 4.375rem;
+  left: 0;
+  width: 100%;
+  padding: 1.75rem 0 3.25rem;
+  background: #fff; }
+  .combobox .inner-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+  .combobox .cols {
+    display: flex;
+    align-items: stretch; }
+  .combobox .col {
+    min-width: 12.5rem;
+    padding: 0 1.75rem; }
+    .combobox .col + .col {
+      border-left: 1px solid #DDDDDD; }
+    .combobox .col .title {
+      font: 600 0.875rem/1.3125rem "Poppins", "Rubik", sans-serif;
+      color: #65226D;
+      margin-bottom: 1rem; }
+    .combobox .col .list-cols {
+      display: flex;
+      align-items: flex-start; }
+    .combobox .col ul.trending li a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.3125rem; }
+      .combobox .col ul.trending li a.red {
+        color: #E3483E; }
+    .combobox .col ul li {
+      margin-bottom: 0.5rem; }
+      .combobox .col ul li a {
+        font: 400 0.75rem/1.125rem "Poppins", "Rubik", sans-serif;
+        color: #000; }
+  .combobox .category-preview {
+    margin-left: 4.375rem; }
+    .combobox .category-preview img {
+      max-width: 14.5rem; }
+    .combobox .category-preview .title {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      letter-spacing: -0.01em;
+      color: #5E5E5E; }
+
+.search-dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 7.375rem;
+  left: 0; }
+  .search-dropdown .form-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #5E5E5E; }
+    .search-dropdown .form-search fieldset {
+      flex-grow: 1; }
+    .search-dropdown .form-search .field {
+      width: 100%;
+      border: 0;
+      font: 500 1.5rem/2.25rem "Poppins", "Rubik", sans-serif;
+      letter-spacing: -0.01em;
+      padding: 0.5rem 0; }
+    .search-dropdown .form-search .icon-close {
+      font-size: 1.25rem;
+      padding: 0.3125rem;
+      color: #5E5E5E; }
+
+/* ============= Homepage Elements ============= */
+.hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .hero .photo {
+    width: 100%; }
+  .hero .hero-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .hero .hero-info .title {
+      font-size: 4rem;
+      line-height: 5rem; }
+    .hero .hero-info .subtitle {
+      font-size: 1.125rem;
+      line-height: 1.3;
+      margin-bottom: 3.625rem; }
+    .hero .hero-info .button {
+      padding: 0 3rem; }
+
+.featured-items .inner-wrap {
+  display: flex;
+  margin: 1.5rem -0.375rem 0; }
+  .featured-items .inner-wrap:before, .featured-items .inner-wrap:after {
+    content: "";
+    display: table; }
+  .featured-items .inner-wrap:after {
+    clear: both; }
+
+.featured-items .featured-item {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 0 0.75rem; }
+  .featured-items .featured-item .photo {
+    width: 100%; }
+  .featured-items .featured-item .item-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0 0.75rem; }
+    .featured-items .featured-item .item-info .box {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.1); }
+    .featured-items .featured-item .item-info .title {
+      font: 900 2.25rem/2.8125rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+      margin-bottom: 0.625rem; }
+    .featured-items .featured-item .item-info .subtitle {
+      font: 500 1.125rem/1.6875rem "Poppins", "Rubik", sans-serif;
+      margin-bottom: 1.25rem; }
+    .featured-items .featured-item .item-info .button {
+      padding: 0 3rem; }
+
+.items-slider-wrap {
+  margin-top: 4rem; }
+  .items-slider-wrap .item-slider .grid-item {
+    width: 26.25rem; }
+
+.newsletter {
+  width: 100%;
+  margin-top: 4rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F3;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .newsletter .title {
+    font: 900 2.25rem/2.8125rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+    color: #fff;
+    margin-bottom: 0.625rem; }
+
+/* =============== Main Footer =============== */
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 3.5rem;
+  border-top: 1px solid #DDDDDD; }
+  .main-footer .inner-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .main-footer .menu-cols {
+    display: flex;
+    flex-grow: 1; }
+    .main-footer .menu-cols .col {
+      flex-grow: 1;
+      max-width: 13.75rem; }
+      .main-footer .menu-cols .col .headline {
+        font: bold 1.125rem/1.375rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+        color: #65226D;
+        margin-bottom: 1.25rem; }
+      .main-footer .menu-cols .col a {
+        font: 400 0.8125rem/2 "Poppins", "Rubik", sans-serif;
+        color: #000; }
+        .main-footer .menu-cols .col a:hover {
+          color: #5E5E5E; }
+      .main-footer .menu-cols .col p + p {
+        margin-top: 2.5rem; }
+  .main-footer .socials {
+    display: flex; }
+    .main-footer .socials span {
+      font-size: 0.8125rem; }
+    .main-footer .socials [class*="icon"] {
+      margin-left: 1.625rem;
+      font-size: 1.125rem;
+      color: #000; }
+  .main-footer .copyright {
+    width: 100%;
+    position: relative;
+    min-height: 3.125rem;
+    padding-top: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    border-top: 1px solid #DDDDDD; }
+    .main-footer .copyright .scroll-top {
+      position: absolute;
+      top: -1.25rem;
+      right: 0; }
+      .main-footer .copyright .scroll-top [class*="icon"] {
+        font-size: 1.25rem;
+        color: #65226D; }
+    .main-footer .copyright a, .main-footer .copyright span {
+      font-size: 11px;
+      color: #5E5E5E; }

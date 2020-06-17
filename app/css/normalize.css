@@ -93,8 +93,8 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0;
-  font-family: "Rubik", "Poppins", sans-serif; }
+  font-size: 0.875rem;
+  font-family: "Poppins", "Rubik", sans-serif; }
 
 /* ==========================================================================
    Links

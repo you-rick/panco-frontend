@@ -1,6 +1,16 @@
 @import "../config/variables";
 @import "../config/mixins";
 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headlineFont;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
 .site-container {
   width: 100%;
   padding: 0 40px;
@@ -17,70 +27,162 @@
 }
 
 .button {
+  height: rem(50px);
+  padding: 0 rem(64px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include radius(64px);
+  font: 400 rem(14px)/1 $baseFont;
+  letter-spacing: -0.01em;
+
+  [class*="icon"] {
+    margin-right: rem(6px);
+  }
+
+  &.lg {
+    height: rem(64px);
+    font-size: rem(16px);
+  }
+
+  &.block {
+    display: block;
+  }
+
   &.white {
+    background: #fff;
+    color: $purple;
+
     &:hover {
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    &-outlined {
+      background: transparent;
+      border: 2px solid #FFFFFF;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: $purple;
+      }
     }
   }
 
   &.purple {
+    background: $purple;
+    color: #fff;
+
     &:hover {
+      background: $purpleHover;
     }
   }
 
-  &.filled {
-    &:hover {
-    }
-  }
+  &.grey {
+    background: $grey;
+    color: $purple;
 
-  &.outlined {
     &:hover {
-
+      background: $mediumGrey;
     }
   }
 }
 
 
-.featured-item {
-  .title {
-    &.lg {
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.col_2 {
+    & > * {
+      flex: 1 1 50%;
     }
   }
 
-  .subtitle {
+  &.col_3 {
+    & > * {
+      flex: 1 1 33.33%;
+    }
   }
 
-  .button {
+  &.col_4 {
+    & > * {
+      flex: 1 1 25%;
+    }
   }
 }
-
 
 // Grid Item
 .grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: rem(16px);
+
   .img-wrap {
+    display: flex;
+    width: 100%;
+    position: relative;
+
     .sale {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: rem(20px);
+      right: rem(-16px);
+      width: rem(98px);
+      height: rem(96px);
+      padding-top: rem(8px);
+      font: bold rem(28px)/1 $headlineFont;
+      color: #fff;
+      background: url(../images/purple_star.png) no-repeat center;
+      @include background-size(contain);
     }
 
     .photo {
+      width: 100%;
     }
 
     .save-item {
-      [class*="icon"] {
-      }
+      position: absolute;
+      z-index: 1;
+      bottom: rem(20px);
+      right: rem(20px);
+      font-size: rem(20px);
+      color: $purple;
     }
   }
 
   .item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: rem(16px);
+
     .title {
+      font: 400 rem(14px)/rem(21px) $baseFont;
     }
 
     .type {
+      font: 400 rem(12px)/rem(18px) $baseFont;
+      color: $greyText;
     }
 
     .price {
+      font: bold rem(16px)/rem(20px) $headlineFont;
+      margin-top: rem(8px);
+      color: $purple;
+      display: flex;
+
       .old {
+        text-decoration: line-through;
+        color: $darkGrey;
+        margin-right: rem(12px);
       }
 
       .new {
+        color: $red;
       }
     }
   }

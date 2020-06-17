@@ -12,6 +12,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Ultima Pro';
+  src: url("../fonts/ultima-pro/UltimaProBlack.woff") format("woff"), url("../fonts/ultima-pro/UltimaProBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
 /* === Iconset === */
 @font-face {
   font-family: 'icomoon';
@@ -25,6 +32,7 @@
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
+  font-size: 1rem;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

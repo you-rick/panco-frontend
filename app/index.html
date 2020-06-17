@@ -9,27 +9,30 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
+    <link rel="stylesheet" type="text/css" href="css/libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/slick/slick-theme.css">
 </head>
 <body>
 <div class="main-wrapper">
-    <div class="topbar">
-        <div class="site-container wide">
-            <aside class="navbar">
+    <div class="site-container wide">
+        <div class="topbar">
+            <div class="mobile-logo"></div>
+            <div class="navigation">
                 <div class="lang">
                     <button type="button" class="lang-toggle">
                         <i class="icon-down"></i>
                         <span>English</span>
                     </button>
                 </div>
-                <a href="#" class="login">
+                <a href="#" class="navlink">
                     <i class="icon-person"></i>
                     <span>Login</span>
                 </a>
-                <a href="#" class="favorites">
+                <a href="#" class="navlink">
                     <i class="icon-heart-outline"></i>
                 </a>
                 <div class="cart">
@@ -37,22 +40,135 @@
                         <i class="icon-shopping-cart"></i>
                         <sup class="number">5</sup>
                     </button>
+                    <div class="cart-dropdown">
+                        <ul class="items">
+                            <li>
+                                <a href="#" class="item">
+                                    <img src="images/related_item_1.jpg" alt="Img 1">
+                                    <div class="info">
+                                        <span class="title">Pieced Multi-Color Sneakers</span>
+                                        <span class="size">EU 26 (16.2cm) x1</span>
+                                        <span class="price">
+                                            <span class="old">640 MDL</span>
+                                            <span class="new">559 MDL</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item">
+                                    <img src="images/related_item_2.jpg" alt="Img 2">
+                                    <div class="info">
+                                        <span class="title">Detailed Sneakers</span>
+                                        <span class="size">EU 26 (16.2cm) x1</span>
+                                        <span class="price">545 MDL</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item">
+                                    <img src="images/related_item_3.jpg" alt="Img 3">
+                                    <div class="info">
+                                        <span class="title">Mickey Mouse Disney Sneakers</span>
+                                        <span class="size">EU 26 (16.2cm) x1</span>
+                                        <span class="price">545 MDL</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.items -->
+                        <p class="items-added">5 items added</p>
+                        <a href="#" class="button purple block lg">View cart</a>
+                    </div>
                 </div>
-            </aside>
+            </div>
             <!-- /.navbar -->
         </div>
     </div>
     <!-- /.topbar -->
 
     <header class="main-header">
-        <div class="site-cantainer">
+        <div class="site-container">
             <div class="inner-wrap">
                 <a href="#" class="logo">Panco.md</a>
                 <div class="topnav-wrap">
                     <ul class="topnav">
                         <li><a href="#">Newborn</a></li>
                         <li><a href="#">Kids</a></li>
-                        <li><a href="#">Girls</a></li>
+                        <li class="with-dropdown">
+                            <a href="#">Girls</a>
+                            <div class="combobox">
+                                <div class="inner-wrap">
+                                    <div class="cols">
+                                        <div class="col">
+                                            <h6 class="title">Trending</h6>
+                                            <ul class="trending">
+                                                <li><a href="#" class="red">Sale up to 40%</a></li>
+                                                <li><a href="#">New Releases</a></li>
+                                                <li><a href="#">Best Sellers</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col">
+                                            <h6 class="title">Clothing</h6>
+                                            <div class="list-cols">
+                                                <ul>
+                                                    <li><a href="#">Athlete</a></li>
+                                                    <li><a href="#">Track suit</a></li>
+                                                    <li><a href="#">Trousers</a></li>
+                                                    <li><a href="#">Shorts</a></li>
+                                                    <li><a href="#">Sweater</a></li>
+                                                    <li><a href="#">Raincoat</a></li>
+                                                    <li><a href="#">Underwear</a></li>
+                                                    <li><a href="#">Dress</a></li>
+                                                    <li><a href="#">Salopet</a></li>
+                                                    <li><a href="#">Body</a></li>
+                                                    <li><a href="#">Jila</a></li>
+                                                    <li><a href="#">Pyjamas</a></li>
+                                                    <li><a href="#">Vest</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Jacket</a></li>
+                                                    <li><a href="#">Coat</a></li>
+                                                    <li><a href="#">Bathrobe</a></li>
+                                                    <li><a href="#">Monte</a></li>
+                                                    <li><a href="#">Shirt</a></li>
+                                                    <li><a href="#">Sweatshirt</a></li>
+                                                    <li><a href="#">T-Shirt</a></li>
+                                                    <li><a href="#">Cardigan</a></li>
+                                                    <li><a href="#">Skirt</a></li>
+                                                    <li><a href="#">Tights</a></li>
+                                                    <li><a href="#">Swimwear Bikini</a></li>
+                                                    <li><a href="#">Tunic</a></li>
+                                                    <li><a href="#">Bolero</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col">
+                                            <h6 class="title">Shoes</h6>
+                                            <ul>
+                                                <li><a href="#">Sandals</a></li>
+                                                <li><a href="#">Boots</a></li>
+                                                <li><a href="#">Casual Shoes</a></li>
+                                                <li><a href="#">Marine Shoes</a></li>
+                                                <li><a href="#">Babette</a></li>
+                                                <li><a href="#">Slipper</a></li>
+                                                <li><a href="#">Panduf</a></li>
+                                                <li><a href="#">Booties</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.cols -->
+                                    <div class="category-preview">
+                                        <span class="title">Age: 3-12 years</span>
+                                        <img src="images/menu_img.jpg" alt="Girls"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.combobox -->
+                        </li>
                         <li><a href="#">Boys</a></li>
                         <li><a href="#">New Releases</a></li>
                         <li><a href="#">Sale</a></li>
@@ -68,15 +184,24 @@
     </header>
     <!-- /.main-header -->
 
+    <div class="search-dropdown">
+        <div class="site-container wide">
+            <form class="form-search">
+                <fieldset>
+                    <input type="text" class="field" placeholder="Search..."/>
+                </fieldset>
+                <button type="button" class="icon-close"></button>
+            </form>
+        </div>
+    </div>
+    <!-- /.search-dropdown -->
 
     <div class="hero">
-        <img src="images/home_hero.jpg" alt="Home Hero"/>
-        <div class="inner-wrap">
-            <div class="hero-info">
-                <h1 class="title lg">SPRING-SUMMER 2020</h1>
-                <h4 class="subtitle">Discover this week the latest pieces from our latest collection</h4>
-                <button class="button white filled">Shop</button>
-            </div>
+        <img src="images/home_hero.jpg" class="photo" alt="Home Hero"/>
+        <div class="hero-info">
+            <h1 class="title">SPRING-SUMMER 2020</h1>
+            <h4 class="subtitle">Discover this week the latest pieces from our latest collection</h4>
+            <button class="button white filled">Shop</button>
         </div>
     </div>
     <!-- /.hero -->
@@ -84,19 +209,23 @@
         <section class="featured-items">
             <div class="inner-wrap">
                 <div class="featured-item">
-                    <img src="images/home_img_1.jpg" alt="Featured 1"/>
+                    <img src="images/home_img_1.jpg" class="photo" alt="Featured 1"/>
                     <div class="item-info">
-                        <h2 class="title">PRODUCTS FOR NEWBORN</h2>
-                        <button class="button white filled">Shop</button>
+                        <div class="box">
+                            <h2 class="title">PRODUCTS FOR NEWBORN</h2>
+                            <button class="button white filled">Shop</button>
+                        </div>
                     </div>
 
                 </div>
                 <div class="featured-item">
-                    <img src="images/home_img_2.jpg" alt="Featured 2"/>
+                    <img src="images/home_img_2.jpg" class="photo" alt="Featured 2"/>
                     <div class="item-info">
-                        <h2 class="title">PAJAMAS AND UNDERWEAR</h2>
-                        <h4 class="subtitle">Up to <b>50%</b> discount on selected items</h4>
-                        <button class="button white filled">Shop</button>
+                        <div class="box">
+                            <h2 class="title">PAJAMAS AND UNDERWEAR</h2>
+                            <h4 class="subtitle">Up to <b>50%</b> discount on selected items</h4>
+                            <button class="button white filled">Shop</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,7 +237,7 @@
             <div class="item-slider">
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -122,7 +251,7 @@
                 <!-- /.grid-item -->
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -136,7 +265,7 @@
                 <!-- /.grid-item -->
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -150,7 +279,7 @@
                 <!-- /.grid-item -->
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -164,7 +293,7 @@
                 <!-- /.grid-item -->
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -178,7 +307,7 @@
                 <!-- /.grid-item -->
                 <div class="grid-item">
                     <div class="img-wrap">
-                        <img src="images/related_item_1.jpg" alt="Item"/>
+                        <img src="images/new_item_1.jpg" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -200,7 +329,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -218,7 +347,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -236,7 +365,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -254,7 +383,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -272,7 +401,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -290,7 +419,7 @@
                 <div class="grid-item">
                     <div class="img-wrap">
                         <span class="sale">-30%</span>
-                        <img src="images/related_item_1.jpg" class="photo" alt="Item"/>
+                        <img src="images/hot_sale_1.jpg" class="photo" alt="Item"/>
                         <button type="button" class="save-item">
                             <i class="icon-heart-outline"></i>
                         </button>
@@ -311,14 +440,12 @@
         <!-- /.items-slider-wrap -->
 
         <section class="newsletter" style="background-image: url('images/newsletter_bg.jpg')">
-            <div class="inner-wrap">
-                <h3 class="title">SIGN UP FOR OUR NEWSLETTER</h3>
-                <button class="button white filled">Shop</button>
-            </div>
+            <h3 class="title">SIGN UP FOR OUR NEWSLETTER</h3>
+            <button class="button white filled">Shop</button>
         </section>
         <!-- /.newsletter -->
 
-        <section class="flex-parent justify-center align-center mt-2 mb-2">
+        <section class="flex-parent justify-center align-center flex-column mt-2 mb-2">
             <h5>Latest Info</h5>
             <p class="mb-1">
                 We share with you the measures and the information about
@@ -362,14 +489,12 @@
                     <ul class="col">
                         <li><h6 class="headline">Contacts</h6></li>
                         <li>
-                            <p>
+                            <p class="flex-parent flex-column">
                                 str. Miorița 1, Chișinău
                                 <a href="tel:+37322800851">+373 22 800 851</a>
                                 <a href="tel:+37379991165">+373 79 991 165</a>
                             </p>
-                        </li>
-                        <li>
-                            <p>
+                            <p class="flex-parent flex-column">
                                 str. Calea Orheiului 28/1, Chișinău
                                 <a href="tel:+37322800841">+373 22 800 841</a>
                                 <a href="tel:+37376007750">+373 76 007 750</a>
