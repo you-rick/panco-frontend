@@ -28,8 +28,7 @@
   align-items: stretch;
 
   & > * {
-    margin-left: rem(4px);
-    padding-left: rem(8px);
+    padding-left: rem(14px);
   }
 
 
@@ -299,40 +298,43 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      padding: 0 rem(29px);
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: rem(118px);
+        height: 0;
+        padding-bottom: rem(118px);
+        transform: translate(-50%, -50%) scale(0);
+        background: transparent;
+        @include radius(108px);
+        @include smooth(0.1s);
+      }
+
+      &:hover {
+        &:before {
+          background: #F9F9F9;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
 
       & > a {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 rem(29px);
         font: bold rem(14px)/1 $headlineFont;
         color: #000;
         text-transform: uppercase;
 
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          z-index: -1;
-          width: rem(118px);
-          height: 0;
-          padding-bottom: rem(118px);
-          transform: translate(-50%, -50%) scale(0);
-          background: transparent;
-          @include radius(108px);
-          @include smooth(0.1s);
-        }
-
         &:hover {
           color: $purple;
-
-          &:before {
-            background: #F9F9F9;
-            transform: translate(-50%, -50%) scale(1);
-          }
         }
       }
 
@@ -375,8 +377,8 @@
 
 .combobox {
   display: none;
-  position: absolute;
-  top: rem(70px);
+  position: fixed;
+  top: rem(118px);
   left: 0;
   width: 100%;
   padding: rem(28px) 0 rem(52px);
@@ -554,7 +556,6 @@
   }
 }
 
-
 .featured-items {
   .inner-wrap {
     display: flex;
@@ -610,7 +611,6 @@
   }
 }
 
-
 .items-slider-wrap {
   .slider-container {
     margin: 0 rem(-10px);
@@ -629,7 +629,6 @@
     }
   }
 }
-
 
 .newsletter {
   width: 100%;
@@ -663,7 +662,6 @@
   }
 }
 
-
 .latest-info-wrap {
   width: 100%;
   display: flex;
@@ -672,6 +670,7 @@
   justify-content: center;
   margin: rem(96px) 0;
 }
+
 
 /* =============== Main Footer =============== */
 .main-footer {

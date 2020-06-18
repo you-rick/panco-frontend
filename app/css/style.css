@@ -643,8 +643,7 @@ h1, h2, h3 {
   display: flex;
   align-items: stretch; }
   .topbar-navigation > * {
-    margin-left: 0.25rem;
-    padding-left: 0.5rem; }
+    padding-left: 0.875rem; }
   .topbar-navigation .lang {
     position: relative;
     display: flex;
@@ -829,38 +828,39 @@ h1, h2, h3 {
       display: flex;
       justify-content: center;
       align-items: stretch;
-      padding: 0 1.8125rem; }
+      position: relative; }
+      .main-header .topnav > li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: 7.375rem;
+        height: 0;
+        padding-bottom: 7.375rem;
+        transform: translate(-50%, -50%) scale(0);
+        background: transparent;
+        -webkit-border-radius: 108px;
+        border-radius: 108px;
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out; }
+      .main-header .topnav > li:hover:before {
+        background: #F9F9F9;
+        transform: translate(-50%, -50%) scale(1); }
       .main-header .topnav > li > a {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 1.8125rem;
         font: bold 0.875rem/1 "Ultima Pro", "Poppins", "Rubik", sans-serif;
         color: #000;
         text-transform: uppercase; }
-        .main-header .topnav > li > a:before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          z-index: -1;
-          width: 7.375rem;
-          height: 0;
-          padding-bottom: 7.375rem;
-          transform: translate(-50%, -50%) scale(0);
-          background: transparent;
-          -webkit-border-radius: 108px;
-          border-radius: 108px;
-          -webkit-transition: all 0.1s ease-out;
-          -moz-transition: all 0.1s ease-out;
-          -o-transition: all 0.1s ease-out;
-          transition: all 0.1s ease-out; }
         .main-header .topnav > li > a:hover {
           color: #65226D; }
-          .main-header .topnav > li > a:hover:before {
-            background: #F9F9F9;
-            transform: translate(-50%, -50%) scale(1); }
       .main-header .topnav > li.with-dropdown:hover .combobox {
         display: block; }
   .main-header .nav-box {
@@ -882,8 +882,8 @@ h1, h2, h3 {
 
 .combobox {
   display: none;
-  position: absolute;
-  top: 4.375rem;
+  position: fixed;
+  top: 7.375rem;
   left: 0;
   width: 100%;
   padding: 1.75rem 0 3.25rem;
