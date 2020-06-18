@@ -216,7 +216,7 @@
         <!-- /.search-dropdown -->
     </div>
 
-    <div class="site-container">
+    <div class="site-container o-hidden">
         <main class="products">
             <header class="products-header">
                 <div class="col flex-parent flex-column">
@@ -246,11 +246,11 @@
                     <div class="custom-dropdown">
                         <button class="dropdown-toggle">
                             <i class="icon-down"></i>
-                            <span>See: 4 rows</span>
+                            <span>See: <span id="col_number_label">4</span> rows</span>
                         </button>
                         <ul class="dropdown-list">
-                            <li><a href="#">3 rows</a></li>
-                            <li><a href="#">4 rows</a></li>
+                            <li><button type="button" class="toggle-rows" data-row="3">3 rows</button></li>
+                            <li><button type="button" class="toggle-rows" data-row="4">4 rows</button></li>
                         </ul>
                     </div>
                 </div>
@@ -264,7 +264,7 @@
             </header>
             <!-- /.products-header -->
 
-            <div class="grid-container cols_4">
+            <div id="grid_container" class="grid-container" data-rows="4">
                 <div class="grid-item">
                     <div class="img-wrap">
                         <img src="images/grid-item.jpg" class="photo" alt="Item"/>
@@ -490,6 +490,39 @@
                 </div>
                 <!-- /.grid-item -->
             </div>
+            <aside class="filter-wrapper">
+                <div class="filter-header">
+                    <button class="filter-toggle">
+                        <i class="icon-close"></i>
+                        <span>Hide Filters</span>
+                    </button>
+                    <button class="clear-filter">Clear (4)</button>
+                </div>
+
+                <div class="filter-body">
+                    <ul class="placeholder-list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="placeholder-list mt-4">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="placeholder-list mt-4">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </aside>
         </main>
     </div>
 

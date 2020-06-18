@@ -7,6 +7,9 @@
 .hidden {
   display: none; }
 
+.o-hidden {
+  overflow: hidden; }
+
 .text-left {
   text-align: left !important; }
 
@@ -487,13 +490,14 @@ h1, h2, h3 {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 0 -1rem 5rem; }
-  .grid-container.cols_2 > * {
-    flex: 1 1 50%; }
-  .grid-container.cols_3 > * {
-    flex: 1 1 33.33%; }
-  .grid-container.cols_4 > * {
-    flex: 1 1 25%; }
+  .grid-container.cols_2 > *, .grid-container[data-rows="2"] > * {
+    flex: 0 1 50%; }
+  .grid-container.cols_3 > *, .grid-container[data-rows="3"] > * {
+    flex: 0 1 33.33%; }
+  .grid-container.cols_4 > *, .grid-container[data-rows="4"] > * {
+    flex: 0 1 25%; }
 
 .grid-item {
   display: flex;
@@ -597,7 +601,6 @@ h1, h2, h3 {
     position: absolute;
     overflow: hidden;
     background: #fff;
-    border: 1px solid #DDDDDD;
     padding: 0.5rem 0;
     -webkit-border-radius: 16px;
     border-radius: 16px;
@@ -610,7 +613,7 @@ h1, h2, h3 {
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-    .custom-dropdown .dropdown-list li a {
+    .custom-dropdown .dropdown-list li a, .custom-dropdown .dropdown-list li button {
       display: block;
       width: 100%;
       font-size: 0.75rem;
@@ -618,7 +621,7 @@ h1, h2, h3 {
       background: #fff;
       color: #000;
       padding: 0.25rem 1.375rem; }
-      .custom-dropdown .dropdown-list li a:hover {
+      .custom-dropdown .dropdown-list li a:hover, .custom-dropdown .dropdown-list li button:hover {
         color: #5E5E5E; }
 
 /* === Slick Slider custom styles === */
@@ -697,6 +700,15 @@ h1, h2, h3 {
     font-family: 'icomoon' !important;
     content: "\e917";
     color: #9B9B9B; }
+
+.placeholder-list {
+  width: 100%; }
+  .placeholder-list li {
+    height: 16px;
+    background: #DDDDDD;
+    margin-bottom: 10px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
 
 /* ============ Header ============ */
 .topbar {
@@ -935,7 +947,8 @@ h1, h2, h3 {
         padding: 0 1.8125rem;
         font: bold 0.875rem/1 "Ultima Pro", "Poppins", "Rubik", sans-serif;
         color: #000;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        white-space: nowrap; }
         .main-header .topnav > li > a:hover {
           color: #65226D; }
       .main-header .topnav > li.with-dropdown:hover .combobox {
@@ -1225,6 +1238,23 @@ h1, h2, h3 {
       color: #5E5E5E; }
 
 /* =============== Products =============== */
+.products {
+  position: relative; }
+  .products .grid-container {
+    padding-right: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .products.filter-shown .grid-container {
+    padding-right: 18.75rem; }
+    .products.filter-shown .grid-container[data-rows="4"] > * {
+      flex: 1 1 33.33%; }
+  .products.filter-shown .filter-wrapper {
+    visibility: visible;
+    transform: translate(0, 0);
+    pointer-events: auto; }
+
 .products-header {
   display: flex;
   justify-content: space-between;
@@ -1248,5 +1278,39 @@ h1, h2, h3 {
     font-size: 1rem;
     line-height: 1.5rem; }
     .products-header .filter-toggle [class*="icon"] {
+      font-size: 1.5rem;
+      margin-right: 0.5rem; }
+
+.filter-wrapper {
+  width: 18.75rem;
+  position: absolute;
+  top: 2px;
+  right: -2.5rem;
+  height: 100%;
+  z-index: 2;
+  background: #fff;
+  padding: 2.25rem 2.1875rem 2.1875rem 0;
+  visibility: hidden;
+  transform: translate(100%, 0);
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  .filter-wrapper .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.125rem; }
+  .filter-wrapper .clear-filter {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #9B9B9B; }
+  .filter-wrapper .filter-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem; }
+    .filter-wrapper .filter-toggle [class*="icon"] {
       font-size: 1.5rem;
       margin-right: 0.5rem; }

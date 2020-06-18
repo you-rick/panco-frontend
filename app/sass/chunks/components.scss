@@ -98,23 +98,24 @@ h1, h2, h3 {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 0 rem(-16px) 5rem;
 
-  &.cols_2 {
+  &.cols_2, &[data-rows="2"] {
     & > * {
-      flex: 1 1 50%;
+      flex: 0 1 50%;
     }
   }
 
-  &.cols_3 {
+  &.cols_3, &[data-rows="3"] {
     & > * {
-      flex: 1 1 33.33%;
+      flex: 0 1 33.33%;
     }
   }
 
-  &.cols_4 {
+  &.cols_4, &[data-rows="4"] {
     & > * {
-      flex: 1 1 25%;
+      flex: 0 1 25%;
     }
   }
 }
@@ -266,7 +267,7 @@ h1, h2, h3 {
     position: absolute;
     overflow: hidden;
     background: #fff;
-    border: 1px solid $mediumGrey;
+    //border: 1px solid $mediumGrey;
     padding: rem(8px) 0;
     @include radius(16px);
 
@@ -278,7 +279,7 @@ h1, h2, h3 {
     @include smooth(0.2s);
 
     li {
-      a {
+      a, button {
         display: block;
         width: 100%;
         font-size: rem(12px);
@@ -389,3 +390,12 @@ h1, h2, h3 {
   }
 }
 
+.placeholder-list {
+  width: 100%;
+  li {
+    height: 16px;
+    background: $mediumGrey;
+    margin-bottom: 10px;
+    @include radius(4px);
+  }
+}

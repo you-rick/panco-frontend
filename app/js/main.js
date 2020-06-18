@@ -41,4 +41,15 @@ $(function () {
            $(".custom-dropdown").removeClass("active");
         }
     });
+
+    $(".filter-toggle").on("click", function (e) {
+        e.preventDefault();
+        $(".products").toggleClass("filter-shown");
+    });
+
+    $(".toggle-rows").on("click", function () {
+        var number = $(this).attr("data-row");
+        $("#grid_container").attr("data-rows", number);
+        $("#col_number_label").text(number);
+    });
 });

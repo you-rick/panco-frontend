@@ -341,6 +341,7 @@
         font: bold rem(14px)/1 $headlineFont;
         color: #000;
         text-transform: uppercase;
+        white-space: nowrap;
 
         &:hover {
           color: $purple;
@@ -780,6 +781,33 @@
 
 
 /* =============== Products =============== */
+.products {
+  position: relative;
+
+  .grid-container {
+    padding-right: 0;
+    @include smooth(0.2s);
+  }
+
+  &.filter-shown {
+    .grid-container {
+      padding-right: rem(300px);
+
+      &[data-rows="4"] {
+        & > * {
+          flex: 1 1 33.33%;
+        }
+      }
+    }
+
+    .filter-wrapper {
+      visibility: visible;
+      transform: translate(0, 0);
+      pointer-events: auto;
+    }
+  }
+}
+
 .products-header {
   display: flex;
   justify-content: space-between;
@@ -824,4 +852,46 @@
   }
 }
 
+.filter-wrapper {
+  width: rem(300px);
+  position: absolute;
+  top: 2px;
+  right: rem(-40px);
+  height: 100%;
+  z-index: 2;
+  background: #fff;
+  padding: rem(36px) rem(35px) rem(35px) 0;
 
+  visibility: hidden;
+  transform: translate(100%, 0);
+  pointer-events: none;
+  @include smooth(0.2s);
+
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(34px);
+  }
+
+  .clear-filter {
+     font-size: rem(16px);
+    line-height: rem(24px);
+    color: $greyText;
+  }
+
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    font-size: rem(16px);
+    line-height: rem(24px);
+
+    [class*="icon"] {
+      font-size: rem(24px);
+      margin-right: rem(8px);
+    }
+
+    span {
+    }
+  }
+}
