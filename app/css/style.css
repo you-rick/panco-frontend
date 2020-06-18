@@ -427,6 +427,7 @@ h1, h2, h3 {
 
 .site-container {
   width: 100%;
+  margin: 0 auto;
   padding: 0 40px; }
   .site-container:before, .site-container:after {
     content: "";
@@ -442,7 +443,7 @@ h1, h2, h3 {
 
 .button {
   height: 3.125rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -453,8 +454,11 @@ h1, h2, h3 {
   .button [class*="icon"] {
     margin-right: 0.375rem; }
   .button.lg {
-    height: 4rem;
+    height: 3.75rem;
+    padding: 0 3.75rem;
     font-size: 1rem; }
+  .button.md {
+    padding: 0 2rem; }
   .button.block {
     width: 100%; }
   .button.white {
@@ -546,8 +550,12 @@ h1, h2, h3 {
         color: #E3483E; }
 
 /* === Slick Slider custom styles === */
+.slick-dotted.slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
 .slick-dots.slick-dots {
   text-align: right;
+  bottom: 1rem;
   padding: 0 1rem; }
   .slick-dots.slick-dots li {
     display: inline-flex;
@@ -620,34 +628,40 @@ h1, h2, h3 {
 
 /* ============ Header ============ */
 .topbar {
-  width: 100%;
-  height: 3rem;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .topbar .navigation {
+  width: 100%; }
+  .topbar .topbar-inner-wrap {
+    width: 100%;
+    height: 3rem;
+    position: relative;
     display: flex;
-    align-items: stretch; }
-    .topbar .navigation > * {
-      margin-left: 1.125rem; }
-  .topbar .lang {
+    justify-content: space-between;
+    align-items: center; }
+  .topbar .topbar-nav-wrap .search-toggle {
+    display: none; }
+
+.topbar-navigation {
+  display: flex;
+  align-items: stretch; }
+  .topbar-navigation > * {
+    margin-left: 0.25rem;
+    padding-left: 0.5rem; }
+  .topbar-navigation .lang {
     position: relative;
     display: flex;
     align-items: stretch; }
-    .topbar .lang:hover .dropdown-list {
+    .topbar-navigation .lang:hover .dropdown-list {
       display: block; }
-    .topbar .lang .lang-toggle {
+    .topbar-navigation .lang .lang-toggle {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .topbar .lang .lang-toggle [class*="icon"] {
+      .topbar-navigation .lang .lang-toggle [class*="icon"] {
         font-size: 1.375rem;
         color: #65226D; }
-      .topbar .lang .lang-toggle span {
+      .topbar-navigation .lang .lang-toggle span {
         font-size: 0.75rem;
         line-height: 1.125rem; }
-    .topbar .lang .dropdown-list {
+    .topbar-navigation .lang .dropdown-list {
       display: none;
       top: 2.625rem;
       left: 0;
@@ -659,7 +673,7 @@ h1, h2, h3 {
       padding: 0.5rem 0;
       -webkit-border-radius: 14px;
       border-radius: 14px; }
-      .topbar .lang .dropdown-list li a {
+      .topbar-navigation .lang .dropdown-list li a {
         display: block;
         width: 100%;
         font-size: 0.75rem;
@@ -667,35 +681,35 @@ h1, h2, h3 {
         background: #fff;
         color: #000;
         padding: 0.25rem 1.375rem; }
-        .topbar .lang .dropdown-list li a:hover {
+        .topbar-navigation .lang .dropdown-list li a:hover {
           background: #F3F3F3; }
-  .topbar .navlink {
+  .topbar-navigation .navlink {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .topbar .navlink [class*="icon"] {
+    .topbar-navigation .navlink [class*="icon"] {
       font-size: 1.5rem;
       color: #65226D; }
-    .topbar .navlink span {
+    .topbar-navigation .navlink span {
       color: #000;
       font-size: 0.75rem;
       line-height: 1.125rem; }
-  .topbar .cart {
+  .topbar-navigation .cart {
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center; }
-    .topbar .cart:hover .cart-dropdown {
+    .topbar-navigation .cart:hover .cart-dropdown {
       display: block; }
-    .topbar .cart .cart-toggle {
+    .topbar-navigation .cart .cart-toggle {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center; }
-      .topbar .cart .cart-toggle [class*="icon"] {
+      .topbar-navigation .cart .cart-toggle [class*="icon"] {
         font-size: 1.5rem;
         color: #65226D; }
-      .topbar .cart .cart-toggle .number {
+      .topbar-navigation .cart .cart-toggle .number {
         position: absolute;
         top: -0.375rem;
         right: -0.375rem;
@@ -710,7 +724,7 @@ h1, h2, h3 {
         color: #fff;
         -webkit-border-radius: 20px;
         border-radius: 20px; }
-    .topbar .cart .cart-dropdown {
+    .topbar-navigation .cart .cart-dropdown {
       display: none;
       width: 17.75rem;
       position: absolute;
@@ -720,88 +734,149 @@ h1, h2, h3 {
       background: #fff;
       border: 1px solid #DDDDDD;
       padding: 1.25rem; }
-      .topbar .cart .cart-dropdown .items {
+      .topbar-navigation .cart .cart-dropdown .items {
         margin-bottom: 1.5rem; }
-        .topbar .cart .cart-dropdown .items .item {
+        .topbar-navigation .cart .cart-dropdown .items .item {
           display: flex;
           align-items: center;
           color: #000;
           margin-bottom: 0.875rem; }
-          .topbar .cart .cart-dropdown .items .item img {
+          .topbar-navigation .cart .cart-dropdown .items .item img {
             width: 6rem;
             margin-right: 0.75rem; }
-          .topbar .cart .cart-dropdown .items .item .info {
+          .topbar-navigation .cart .cart-dropdown .items .item .info {
             display: flex;
             flex-direction: column;
             font-size: 0.75rem; }
-            .topbar .cart .cart-dropdown .items .item .info .title {
+            .topbar-navigation .cart .cart-dropdown .items .item .info .title {
               line-height: 1.125rem;
               margin-bottom: 0.25rem; }
-            .topbar .cart .cart-dropdown .items .item .info .size {
+            .topbar-navigation .cart .cart-dropdown .items .item .info .size {
               line-height: 1.125rem;
               margin-bottom: 0.25rem;
               color: #9B9B9B; }
-            .topbar .cart .cart-dropdown .items .item .info .price {
+            .topbar-navigation .cart .cart-dropdown .items .item .info .price {
               display: flex;
               line-height: 1.125rem;
               font: bold 0.75rem/0.9375rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
               color: #65226D; }
-              .topbar .cart .cart-dropdown .items .item .info .price .new {
+              .topbar-navigation .cart .cart-dropdown .items .item .info .price .new {
                 color: #E3483E; }
-              .topbar .cart .cart-dropdown .items .item .info .price .old {
+              .topbar-navigation .cart .cart-dropdown .items .item .info .price .old {
                 text-decoration: line-through;
                 color: #5E5E5E;
                 margin-right: 0.75rem; }
-      .topbar .cart .cart-dropdown .items-added {
+      .topbar-navigation .cart .cart-dropdown .items-added {
         text-align: center;
         font-size: 0.75rem;
         line-height: 1.125rem;
         color: #5E5E5E;
         margin-bottom: 0.5rem; }
 
+.main-header-wrap {
+  height: 4.375rem; }
+
 .main-header {
   width: 100%;
   position: relative;
   z-index: 2;
+  background: #fff;
   border-top: 1px solid #DDDDDD; }
+  .main-header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-top-color: #fff; }
+    .main-header.fixed .header-inner-wrap {
+      height: 3.75rem; }
+    .main-header.fixed + .search-dropdown {
+      top: 3.75rem; }
+    .main-header.fixed .combobox {
+      top: 3.75rem; }
+    .main-header.fixed .search-box {
+      display: none; }
+    .main-header.fixed .navlink > span {
+      display: none; }
   .main-header .header-inner-wrap {
     height: 4.375rem;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
   .main-header .logo {
     font: 900 1.6875rem/2.0625rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
     color: #65226D;
     text-transform: uppercase;
-    width: 9.375rem; }
+    width: 9.375rem;
+    letter-spacing: -0.04em; }
+  .main-header .topnav-wrap {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    padding: 0 5rem; }
   .main-header .topnav {
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: stretch; }
     .main-header .topnav > li {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
       padding: 0 1.8125rem; }
       .main-header .topnav > li > a {
-        font: bold 0.875rem/4.375rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: bold 0.875rem/1 "Ultima Pro", "Poppins", "Rubik", sans-serif;
         color: #000;
         text-transform: uppercase; }
+        .main-header .topnav > li > a:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          width: 7.375rem;
+          height: 0;
+          padding-bottom: 7.375rem;
+          transform: translate(-50%, -50%) scale(0);
+          background: transparent;
+          -webkit-border-radius: 108px;
+          border-radius: 108px;
+          -webkit-transition: all 0.1s ease-out;
+          -moz-transition: all 0.1s ease-out;
+          -o-transition: all 0.1s ease-out;
+          transition: all 0.1s ease-out; }
         .main-header .topnav > li > a:hover {
           color: #65226D; }
+          .main-header .topnav > li > a:hover:before {
+            background: #F9F9F9;
+            transform: translate(-50%, -50%) scale(1); }
       .main-header .topnav > li.with-dropdown:hover .combobox {
         display: block; }
-  .main-header .search-box {
+  .main-header .nav-box {
     width: 9.375rem;
     display: flex;
     align-items: center;
     justify-content: flex-end; }
-  .main-header .search-toggle {
+  .main-header .search-box .search-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center; }
-    .main-header .search-toggle [class*="icon"] {
+    .main-header .search-box .search-toggle [class*="icon"] {
       margin-right: 0.5rem;
       font-size: 1.5rem;
       color: #65226D; }
-    .main-header .search-toggle span {
+    .main-header .search-box .search-toggle span {
       font-size: 0.75rem;
       line-height: 1.125rem; }
 
@@ -866,7 +941,7 @@ h1, h2, h3 {
 
 .search-dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 2;
   background: #fff;
@@ -921,9 +996,10 @@ h1, h2, h3 {
     .hero .hero-info .subtitle {
       font-size: 1.125rem;
       line-height: 1.3;
-      margin-bottom: 3.625rem; }
+      margin-bottom: 3.625rem;
+      text-align: center; }
     .hero .hero-info .button {
-      padding: 0 3rem; }
+      padding: 0 3.75rem; }
 
 .featured-items .inner-wrap {
   display: flex;
@@ -968,16 +1044,15 @@ h1, h2, h3 {
     .featured-items .featured-item .item-info .button {
       padding: 0 3rem; }
 
-.items-slider-wrap {
-  margin-top: 4rem; }
-  .items-slider-wrap .slider-container {
-    margin: 0 -0.625rem;
-    overflow: hidden; }
-  .items-slider-wrap .item-slider .grid-item {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 1rem;
-    margin-right: 1rem; }
+.items-slider-wrap .slider-container {
+  margin: 0 -0.625rem;
+  overflow: hidden; }
+
+.items-slider-wrap .item-slider .grid-item {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem; }
 
 .newsletter {
   width: 100%;
@@ -1027,13 +1102,13 @@ h1, h2, h3 {
     flex-grow: 1; }
     .main-footer .menu-cols .col {
       flex-grow: 1;
-      max-width: 13.75rem; }
+      max-width: 14.75rem; }
       .main-footer .menu-cols .col .headline {
         font: bold 1.125rem/1.375rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
         color: #65226D;
         margin-bottom: 1.25rem; }
       .main-footer .menu-cols .col a {
-        font: 400 0.8125rem/2 "Poppins", "Rubik", sans-serif;
+        font: 400 0.8125rem/2.3 "Poppins", "Rubik", sans-serif;
         color: #000; }
         .main-footer .menu-cols .col a:hover {
           color: #5E5E5E; }

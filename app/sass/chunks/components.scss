@@ -13,6 +13,7 @@ h1, h2, h3 {
 
 .site-container {
   width: 100%;
+  margin: 0 auto;
   padding: 0 40px;
   @include clearfix;
 
@@ -28,7 +29,7 @@ h1, h2, h3 {
 
 .button {
   height: rem(50px);
-  padding: 0 rem(64px);
+  padding: 0 rem(48px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -41,8 +42,13 @@ h1, h2, h3 {
   }
 
   &.lg {
-    height: rem(64px);
+    height: rem(60px);
+    padding: 0 rem(60px);
     font-size: rem(16px);
+  }
+
+  &.md {
+    padding: 0 rem(32px);
   }
 
   &.block {
@@ -189,8 +195,12 @@ h1, h2, h3 {
 }
 
 /* === Slick Slider custom styles === */
+.slick-dotted.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
 .slick-dots.slick-dots {
   text-align: right;
+  bottom: rem(16px);
   padding: 0 rem(16px);
 
   li {

@@ -6,20 +6,32 @@
 /* ============ Header ============ */
 .topbar {
   width: 100%;
-  height: rem(48px);
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  .navigation {
+  .topbar-inner-wrap {
+    width: 100%;
+    height: rem(48px);
+    position: relative;
     display: flex;
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    & > * {
-      margin-left: rem(18px);
+  .topbar-nav-wrap {
+    .search-toggle {
+      display: none;
     }
   }
+}
+
+.topbar-navigation {
+  display: flex;
+  align-items: stretch;
+
+  & > * {
+    margin-left: rem(4px);
+    padding-left: rem(8px);
+  }
+
 
   .lang {
     position: relative;
@@ -213,17 +225,52 @@
   }
 }
 
+.main-header-wrap {
+  height: rem(70px);
+}
+
 .main-header {
   width: 100%;
   position: relative;
   z-index: 2;
+  background: #fff;
   border-top: 1px solid $mediumGrey;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-top-color: #fff;
+
+    .header-inner-wrap {
+      height: rem(60px);
+    }
+
+    & + .search-dropdown {
+      top: rem(60px);
+    }
+
+    .combobox {
+      top: rem(60px);
+    }
+
+    .search-box {
+      display: none;
+    }
+
+    .navlink > span {
+      display: none;
+    }
+  }
 
   .header-inner-wrap {
     height: rem(70px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include smooth(0.2s);
   }
 
   .logo {
@@ -231,27 +278,61 @@
     color: $purple;
     text-transform: uppercase;
     width: rem(150px);
+    letter-spacing: -0.04em;
   }
 
   .topnav-wrap {
-
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    padding: 0 rem(80px);
   }
 
   .topnav {
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 
     & > li {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
       padding: 0 rem(29px);
 
       & > a {
-        font: bold rem(14px)/rem(70px) $headlineFont;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: bold rem(14px)/1 $headlineFont;
         color: #000;
         text-transform: uppercase;
 
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          width: rem(118px);
+          height: 0;
+          padding-bottom: rem(118px);
+          transform: translate(-50%, -50%) scale(0);
+          background: transparent;
+          @include radius(108px);
+          @include smooth(0.1s);
+        }
+
         &:hover {
           color: $purple;
+
+          &:before {
+            background: #F9F9F9;
+            transform: translate(-50%, -50%) scale(1);
+          }
         }
       }
 
@@ -265,27 +346,29 @@
     }
   }
 
-  .search-box {
+  .nav-box {
     width: rem(150px);
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
 
-  .search-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .search-box {
+    .search-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-    [class*="icon"] {
-      margin-right: rem(8px);
-      font-size: rem(24px);
-      color: $purple
-    }
+      [class*="icon"] {
+        margin-right: rem(8px);
+        font-size: rem(24px);
+        color: $purple
+      }
 
-    span {
-      font-size: rem(12px);
-      line-height: rem(18px);
+      span {
+        font-size: rem(12px);
+        line-height: rem(18px);
+      }
     }
   }
 }
@@ -386,10 +469,9 @@
   }
 }
 
-
 .search-dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 2;
   background: #fff;
@@ -463,10 +545,11 @@
       font-size: rem(18px);
       line-height: 1.3;
       margin-bottom: rem(58px);
+      text-align: center;
     }
 
     .button {
-      padding: 0 rem(48px);
+      padding: 0 rem(60px);
     }
   }
 }
@@ -529,8 +612,6 @@
 
 
 .items-slider-wrap {
-  margin-top: rem(64px);
-
   .slider-container {
     margin: 0 rem(-10px);
     overflow: hidden;
@@ -612,7 +693,7 @@
 
     .col {
       flex-grow: 1;
-      max-width: rem(220px);
+      max-width: rem(236px);
 
       li {
       }
@@ -624,7 +705,7 @@
       }
 
       a {
-        font: 400 rem(13px)/2 $baseFont;
+        font: 400 rem(13px)/2.3 $baseFont;
         color: #000;
 
         &:hover {
