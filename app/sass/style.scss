@@ -27,7 +27,7 @@
   display: flex;
   align-items: stretch;
 
-  & > * {
+  & > *:not(:first-child) {
     padding-left: rem(14px);
   }
 
@@ -123,6 +123,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: visible;
 
       [class*="icon"] {
         font-size: rem(24px);
@@ -247,6 +248,10 @@
       height: rem(60px);
     }
 
+    .logo-wrap, .nav-box  {
+      width: rem(220px);
+    }
+
     & + .search-dropdown {
       top: rem(60px);
     }
@@ -272,11 +277,14 @@
     @include smooth(0.2s);
   }
 
+  .logo-wrap {
+    width: rem(150px);
+  }
+
   .logo {
     font: 900 rem(27px)/rem(33px) $headlineFont;
     color: $purple;
     text-transform: uppercase;
-    width: rem(150px);
     letter-spacing: -0.04em;
   }
 

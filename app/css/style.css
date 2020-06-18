@@ -644,7 +644,7 @@ h1, h2, h3 {
 .topbar-navigation {
   display: flex;
   align-items: stretch; }
-  .topbar-navigation > * {
+  .topbar-navigation > *:not(:first-child) {
     padding-left: 0.875rem; }
   .topbar-navigation .lang {
     position: relative;
@@ -706,7 +706,8 @@ h1, h2, h3 {
       position: relative;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      overflow: visible; }
       .topbar-navigation .cart .cart-toggle [class*="icon"] {
         font-size: 1.5rem;
         color: #65226D; }
@@ -792,6 +793,8 @@ h1, h2, h3 {
     border-top-color: #fff; }
     .main-header.fixed .header-inner-wrap {
       height: 3.75rem; }
+    .main-header.fixed .logo-wrap, .main-header.fixed .nav-box {
+      width: 13.75rem; }
     .main-header.fixed + .search-dropdown {
       top: 3.75rem; }
     .main-header.fixed .combobox {
@@ -809,11 +812,12 @@ h1, h2, h3 {
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
+  .main-header .logo-wrap {
+    width: 9.375rem; }
   .main-header .logo {
     font: 900 1.6875rem/2.0625rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
     color: #65226D;
     text-transform: uppercase;
-    width: 9.375rem;
     letter-spacing: -0.04em; }
   .main-header .topnav-wrap {
     height: 100%;
