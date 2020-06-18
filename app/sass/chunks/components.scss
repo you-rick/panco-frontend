@@ -18,7 +18,7 @@ h1, h2, h3 {
   @include clearfix;
 
   &:not(.wide) {
-    max-width: 1920px;
+    max-width: 1600px;
   }
 }
 
@@ -39,6 +39,7 @@ h1, h2, h3 {
 
   [class*="icon"] {
     margin-right: rem(6px);
+    font-size: 120%;
   }
 
   &.lg {
@@ -124,7 +125,12 @@ h1, h2, h3 {
 .grid-item {
   display: flex;
   flex-direction: column;
+  font-size: 16px;
   padding: rem(16px);
+
+  @media screen and (min-width: 1921px) {
+    font-size: 18px;
+  }
 
   .img-wrap {
     display: flex;
@@ -157,9 +163,9 @@ h1, h2, h3 {
     .save-item {
       position: absolute;
       z-index: 1;
-      bottom: rem(20px);
-      right: rem(20px);
-      font-size: rem(20px);
+      bottom: em(20px);
+      right: em(20px);
+      font-size: em(20px);
       color: $purple;
     }
   }
@@ -168,27 +174,27 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: rem(16px);
+    margin-top: em(16px);
 
     .title {
-      font: 400 rem(14px)/rem(21px) $baseFont;
+      font: 400 em(14px)/1.5 $baseFont;
     }
 
     .type {
-      font: 400 rem(12px)/rem(18px) $baseFont;
+      font: 400 em(12px)/em(18px) $baseFont;
       color: $greyText;
     }
 
     .price {
-      font: bold rem(16px)/rem(20px) $headlineFont;
-      margin-top: rem(8px);
+      font: bold em(16px)/em(20px) $headlineFont;
+      margin-top: em(8px);
       color: $purple;
       display: flex;
 
       .old {
         text-decoration: line-through;
         color: $darkGrey;
-        margin-right: rem(12px);
+        margin-right: em(12px);
       }
 
       .new {
@@ -369,7 +375,7 @@ h1, h2, h3 {
   }
 
   .slick-prev {
-    left: rem(32px);
+    left: rem(48px);
 
     &:before {
       font-family: 'icomoon' !important;
@@ -380,7 +386,7 @@ h1, h2, h3 {
   }
 
   .slick-next {
-    right: rem(32px);
+    right: rem(48px);
 
     &:before {
       font-family: 'icomoon' !important;
@@ -392,10 +398,74 @@ h1, h2, h3 {
 
 .placeholder-list {
   width: 100%;
+
   li {
     height: 16px;
     background: $mediumGrey;
     margin-bottom: 10px;
     @include radius(4px);
+  }
+}
+
+
+.custom-collapse {
+  &.shown {
+    .collapse-toggle {
+      [class*="icon"] {
+        transform: rotate(180deg);
+      }
+    }
+
+    .collapse-body {
+      height: auto;
+      max-height: 30rem;
+      padding-bottom: rem(8px);
+    }
+  }
+
+  .collapse-toggle {
+    width: 100%;
+    border-bottom: 1px solid $darkGrey;
+    display: flex;
+    align-items: center;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    padding: rem(8px) 0;
+    margin-bottom: rem(12px);
+
+    [class*="icon"] {
+      font-size: rem(24px);
+      margin-right: rem(2px);
+      transform: rotate(0deg);
+      @include smooth(0.2s);
+    }
+
+    span {
+    }
+  }
+
+  .collapse-body {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    letter-spacing: -0.01em;
+    font-size: rem(13px);
+    line-height: 1.7;
+    padding-bottom: 0;
+    @include smooth(0.3s);
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+
+.filter-list {
+  li {
+    a {
+      &:hover {
+      }
+    }
   }
 }

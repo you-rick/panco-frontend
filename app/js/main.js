@@ -36,9 +36,9 @@ $(function () {
         $parent.toggleClass("active");
     });
 
-    $('body').on('click', function(e) {
-        if($(e.target).closest('.custom-dropdown').length === 0) {
-           $(".custom-dropdown").removeClass("active");
+    $('body').on('click', function (e) {
+        if ($(e.target).closest('.custom-dropdown').length === 0) {
+            $(".custom-dropdown").removeClass("active");
         }
     });
 
@@ -52,4 +52,40 @@ $(function () {
         $("#grid_container").attr("data-rows", number);
         $("#col_number_label").text(number);
     });
+
+
+    if ($(".item-slider-photo").length > 5) {
+        $(".product-slider").slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            dots: false,
+            vertical: true,
+            infinite: false
+        });
+    }
+
+    $(".item-slider-photo").on("mouseover", function () {
+        $(".item-slider-photo").removeClass("active");
+        $(this).addClass("active");
+        var imgSrc = $(this).find("img").attr("src");
+        $("#item_preview").attr("src", imgSrc);
+    });
+
+
+    $(".collapse-toggle").on("click", function () {
+        $(this).closest(".custom-collapse").toggleClass("shown");
+    });
 });
+
+
+
+/*
+
+стрелки - увеличить
+точки - убрать везде кроме главной
+менюшка - шарики по размеру
+
+
+
+
+ */
