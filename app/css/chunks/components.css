@@ -66,12 +66,13 @@ h1, h2, h3 {
 
 .grid-container {
   display: flex;
-  flex-wrap: wrap; }
-  .grid-container.col_2 > * {
+  flex-wrap: wrap;
+  margin: 0 -1rem 5rem; }
+  .grid-container.cols_2 > * {
     flex: 1 1 50%; }
-  .grid-container.col_3 > * {
+  .grid-container.cols_3 > * {
     flex: 1 1 33.33%; }
-  .grid-container.col_4 > * {
+  .grid-container.cols_4 > * {
     flex: 1 1 25%; }
 
 .grid-item {
@@ -130,6 +131,75 @@ h1, h2, h3 {
         margin-right: 0.75rem; }
       .grid-item .item-info .price .new {
         color: #E3483E; }
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.125rem; }
+  .breadcrumbs .link {
+    color: #000; }
+  .breadcrumbs .divider {
+    margin: 0 0.3125rem;
+    font-size: 80%; }
+
+.custom-dropdown {
+  position: relative; }
+  .custom-dropdown:focus {
+    outline: 1px solid #E3483E; }
+  .custom-dropdown.active .dropdown-toggle [class*="icon"] {
+    transform: rotate(180deg); }
+  .custom-dropdown.active .dropdown-list {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+    transform: translate(0, 0); }
+  .custom-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 0; }
+    .custom-dropdown .dropdown-toggle [class*="icon"] {
+      font-size: 1.5rem;
+      margin-right: 0.125rem;
+      transform: rotate(0deg);
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+  .custom-dropdown .dropdown-list {
+    top: 2.5rem;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #DDDDDD;
+    padding: 0.5rem 0;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(0, 1rem);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .custom-dropdown .dropdown-list li a {
+      display: block;
+      width: 100%;
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      background: #fff;
+      color: #000;
+      padding: 0.25rem 1.375rem; }
+      .custom-dropdown .dropdown-list li a:hover {
+        color: #5E5E5E; }
 
 /* === Slick Slider custom styles === */
 .slick-dotted.slick-dotted.slick-slider {

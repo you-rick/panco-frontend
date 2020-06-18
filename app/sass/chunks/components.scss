@@ -98,20 +98,21 @@ h1, h2, h3 {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 rem(-16px) 5rem;
 
-  &.col_2 {
+  &.cols_2 {
     & > * {
       flex: 1 1 50%;
     }
   }
 
-  &.col_3 {
+  &.cols_3 {
     & > * {
       flex: 1 1 33.33%;
     }
   }
 
-  &.col_4 {
+  &.cols_4 {
     & > * {
       flex: 1 1 25%;
     }
@@ -196,10 +197,109 @@ h1, h2, h3 {
   }
 }
 
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: rem(8px);
+  font-size: rem(12px);
+  line-height: rem(18px);
+
+  .link {
+    color: #000;
+  }
+
+  .divider {
+    margin: 0 rem(5px);
+    font-size: 80%;
+  }
+
+  .current {
+  }
+}
+
+.custom-dropdown {
+  position: relative;
+
+  &:focus {
+    outline: 1px solid $red;
+  }
+
+  &.active {
+    .dropdown-toggle {
+      [class*="icon"] {
+        transform: rotate(180deg);
+      }
+    }
+
+    .dropdown-list {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 3;
+      transform: translate(0, 0);
+    }
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    padding: rem(8px) 0;
+
+    [class*="icon"] {
+      font-size: rem(24px);
+      margin-right: rem(2px);
+      transform: rotate(0deg);
+      @include smooth(0.2s);
+    }
+
+    span {
+    }
+  }
+
+  .dropdown-list {
+    top: rem(40px);
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid $mediumGrey;
+    padding: rem(8px) 0;
+    @include radius(16px);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(0, 1rem);
+    @include smooth(0.2s);
+
+    li {
+      a {
+        display: block;
+        width: 100%;
+        font-size: rem(12px);
+        line-height: rem(18px);
+        background: #fff;
+        color: #000;
+        padding: rem(4px) rem(22px);
+
+        &:hover {
+          color: $darkGrey;
+        }
+      }
+    }
+  }
+}
+
 /* === Slick Slider custom styles === */
 .slick-dotted.slick-dotted.slick-slider {
   margin-bottom: 0;
 }
+
 .slick-dots.slick-dots {
   text-align: right;
   bottom: rem(16px);
