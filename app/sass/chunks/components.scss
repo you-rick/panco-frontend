@@ -17,8 +17,11 @@ h1, h2, h3 {
   padding: 0 rem(40px);
   @include clearfix;
 
-  @include md-screen {
+  @include till-md-screen {
     padding: 0 20px;
+  }
+  @include till-sm-screen {
+    overflow: hidden;
   }
 
   &:not(.wide) {
@@ -158,7 +161,7 @@ h1, h2, h3 {
       color: #fff;
       background: url(../images/purple_star.png) no-repeat center;
       @include background-size(contain);
-      @include sm-screen {
+      @include till-md-screen {
         top: 12px;
         right: -4px;
         width: 58px;

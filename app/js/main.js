@@ -2,10 +2,13 @@ $(function () {
     var wWidth = $(window).width();
     var slideNumber = 3;
 
-    if (wWidth > 900) { slideNumber = 3; }
-    else if (wWidth > 600 && wWidth <= 900) {slideNumber = 2;}
-    else {slideNumber = 1;}
-
+    if (wWidth > 900) {
+        slideNumber = 3;
+    } else if (wWidth > 600 && wWidth <= 900) {
+        slideNumber = 2;
+    } else {
+        slideNumber = 1;
+    }
 
 
     $(".item-slider.home").slick({
@@ -92,6 +95,13 @@ $(function () {
     $(".collapse-toggle").on("click", function () {
         $(this).closest(".custom-collapse").toggleClass("shown");
     });
+
+
+    $(".footer-col-toggle").on("click", function () {
+        if (wWidth < 768) {
+            $(this).closest(".col").toggleClass("shown");
+        }
+    })
 });
 
 

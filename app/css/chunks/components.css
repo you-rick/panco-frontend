@@ -17,6 +17,9 @@ h1, h2, h3 {
   @media only screen and (max-width: 1023px) {
     .site-container {
       padding: 0 20px; } }
+  @media only screen and (max-width: 767px) {
+    .site-container {
+      overflow: hidden; } }
   .site-container:not(.wide) {
     max-width: 1600px; }
 
@@ -110,7 +113,7 @@ h1, h2, h3 {
       background: url(../images/purple_star.png) no-repeat center;
       -webkit-background-size: contain;
       background-size: contain; }
-      @media only screen and (max-width: 767.98px) {
+      @media only screen and (max-width: 1023px) {
         .grid-item .img-wrap .sale {
           top: 12px;
           right: -4px;

@@ -7,8 +7,26 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-footer {
+    .inner-wrap {
+      flex-direction: column;
+    }
 
-@include md-screen {
+    .socials {
+      span {
+        display: none;
+      }
+
+      nav a:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+@include till-md-screen {
   /* ============ Header ============ */
 
 
@@ -63,7 +81,7 @@
 }
 
 
-@include sm-screen {
+@include till-sm-screen {
   /* ============ Home components ============ */
   .hero {
     height: 75vh;
@@ -189,6 +207,8 @@
 
   /* ============ Footer ============ */
   .main-footer {
+    padding-top: 24px;
+
     .inner-wrap {
       flex-direction: column;
     }
@@ -199,37 +219,78 @@
       .col {
         max-width: none;
 
-        li {
-
-        }
-
-        &.shown {
+        &.collapsible {
           .headline {
+            position: relative;
+
             &:after {
-              transform: rotate(180deg);
+              content: "\e906";
+              font-family: 'icomoon';
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: 24px;
+              color: #000;
+              transform: rotate(0deg);
+              @include smooth(0.2s);
+            }
+          }
+
+          li {
+            &:not(:first-child) {
+              height: 0;
+              overflow: hidden;
+              @include smooth(0.1s);
+            }
+          }
+
+          &.shown {
+            .headline {
+              &:after {
+                transform: rotate(180deg);
+              }
+            }
+
+            li {
+              &:not(:first-child) {
+                height: 29px;
+              }
             }
           }
         }
 
+        &.contacts {
+          padding-top: 24px;
+          border-top: 1px solid $mediumGrey;
+        }
+
         & + .col {
-          margin-top: 30px;
+          margin-top: 20px;
         }
+      }
+    }
 
-        .headline {
-          position: relative;
+    .socials {
+      margin-top: 30px;
 
-          &:after {
-            content: "\e906";
-            font-family: 'icomoon';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 20px;
-            transform: rotate(0deg);
-            @include smooth(0.2s);
-          }
+      span {
+        display: none;
+      }
+
+      nav a {
+        &:first-child {
+          margin-left: 0;
         }
+      }
+    }
+
+
+    .copyright {
+      margin-top: 30px;
+
+      .scroll-top {
+        display: none;
       }
     }
   }

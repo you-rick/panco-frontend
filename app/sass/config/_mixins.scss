@@ -37,62 +37,33 @@ $experimental: true !default; // set True for support Old Browsers
 }
 
 
-@mixin till-small-desktop {
-  @media only screen and (max-width: 1360px) {
-    @content;
-  }
-}
-
-@mixin till-md-desktop {
-  @media only screen and (max-width: 1440px) {
-    @content;
-  }
-}
-
-@mixin md-screen {
-  @media only screen and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin sm-screen {
-  @media only screen and (max-width: 767.98px) {
-    @content;
-  }
-}
-
-@mixin from-xs-desktop {
-  @media only screen and (min-width: 1260px) {
-    @content;
-  }
-}
-
-@mixin from-small-desktop {
-  @media only screen and (min-width: 1361px) {
-    @content;
-  }
-}
-
-@mixin xs-screen {
-  @media only screen and (max-width: 575.98px) {
-    @content;
-  }
-}
-
-@mixin from-lg-screen {
+@mixin from-md-screen {
   @media only screen and (min-width: 1024px) {
     @content;
   }
 }
-
-@mixin from-md-screen {
+@mixin till-md-screen {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin from-sm-screen {
   @media only screen and (min-width: 768px) {
     @content;
   }
 }
-
+@mixin till-sm-screen {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
 @mixin from-xs-screen {
   @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+@mixin till-xs-screen {
+  @media only screen and (max-width: 575px) {
     @content;
   }
 }
