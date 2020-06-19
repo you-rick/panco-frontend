@@ -551,6 +551,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  @include from-md-screen {
+    background: none !important;
+  }
 
   .photo {
     width: 100%;
@@ -601,6 +604,9 @@
     position: relative;
     text-align: center;
     padding: 0 rem(12px);
+    @include from-md-screen {
+      background: none !important;
+    }
 
     .photo {
       width: 100%;
@@ -617,6 +623,7 @@
       .box {
         height: 100%;
         width: 100%;
+        padding: rem(16px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -675,6 +682,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  @include from-md-screen {
+    background: none !important;
+  }
 
   .inner-wrap {
     position: absolute;
@@ -706,6 +716,7 @@
   align-items: center;
   justify-content: center;
   margin: rem(96px) 0;
+  text-align: center;
 }
 
 
@@ -1015,6 +1026,7 @@
 
 .product-info {
   width: 26%;
+  min-width: rem(345px);
 
   .section-headline {
     font-size: rem(28px);

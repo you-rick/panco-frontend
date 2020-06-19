@@ -50,7 +50,7 @@ $experimental: true !default; // set True for support Old Browsers
 }
 
 @mixin md-screen {
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: 1023px) {
     @content;
   }
 }
@@ -80,7 +80,7 @@ $experimental: true !default; // set True for support Old Browsers
 }
 
 @mixin from-lg-screen {
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 1024px) {
     @content;
   }
 }

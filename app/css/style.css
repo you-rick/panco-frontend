@@ -431,12 +431,15 @@ h1, h2, h3 {
 .site-container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px; }
+  padding: 0 2.5rem; }
   .site-container:before, .site-container:after {
     content: "";
     display: table; }
   .site-container:after {
     clear: both; }
+  @media only screen and (max-width: 1023px) {
+    .site-container {
+      padding: 0 20px; } }
   .site-container:not(.wide) {
     max-width: 1600px; }
 
@@ -503,11 +506,11 @@ h1, h2, h3 {
 .grid-item {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 1rem; }
   @media screen and (min-width: 1921px) {
     .grid-item {
-      font-size: 18px; } }
+      font-size: 1rem; } }
   .grid-item .img-wrap {
     display: flex;
     justify-content: center;
@@ -530,6 +533,15 @@ h1, h2, h3 {
       background: url(../images/purple_star.png) no-repeat center;
       -webkit-background-size: contain;
       background-size: contain; }
+      @media only screen and (max-width: 767.98px) {
+        .grid-item .img-wrap .sale {
+          top: 12px;
+          right: -4px;
+          width: 58px;
+          height: 58px;
+          font-size: 16px;
+          letter-spacing: -0.05em;
+          padding-top: 4px; } }
     .grid-item .img-wrap .photo {
       width: 100%; }
     .grid-item .img-wrap .save-item {
@@ -1127,6 +1139,9 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .hero {
+      background: none !important; } }
   .hero .photo {
     width: 100%; }
   .hero .hero-info {
@@ -1168,6 +1183,9 @@ h1, h2, h3 {
   position: relative;
   text-align: center;
   padding: 0 0.75rem; }
+  @media only screen and (min-width: 768px) {
+    .featured-items .featured-item {
+      background: none !important; } }
   .featured-items .featured-item .photo {
     width: 100%; }
   .featured-items .featured-item .item-info {
@@ -1180,6 +1198,7 @@ h1, h2, h3 {
     .featured-items .featured-item .item-info .box {
       height: 100%;
       width: 100%;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1215,6 +1234,9 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   position: relative; }
+  @media only screen and (min-width: 768px) {
+    .newsletter {
+      background: none !important; } }
   .newsletter .inner-wrap {
     position: absolute;
     top: 0;
@@ -1237,7 +1259,8 @@ h1, h2, h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 6rem 0; }
+  margin: 6rem 0;
+  text-align: center; }
 
 /* =============== Main Footer =============== */
 .main-footer {
@@ -1443,7 +1466,8 @@ h1, h2, h3 {
       width: 100%; }
 
 .product-info {
-  width: 26%; }
+  width: 26%;
+  min-width: 21.5625rem; }
   .product-info .section-headline {
     font-size: 1.75rem; }
   .product-info .price {

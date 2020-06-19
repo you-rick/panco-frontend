@@ -1,13 +1,24 @@
 $(function () {
+    var wWidth = $(window).width();
+    var slideNumber = 3;
+
+    if (wWidth > 900) { slideNumber = 3; }
+    else if (wWidth > 600 && wWidth <= 900) {slideNumber = 2;}
+    else {slideNumber = 1;}
+
+
+
     $(".item-slider.home").slick({
-        slidesToShow: $(this).attr("data-slides") || 3,
-        slidesToScroll: $(this).attr("data-slides") || 3,
-        dots: true
+        slidesToShow: slideNumber,
+        slidesToScroll: slideNumber,
+        dots: true,
+        infinite: false
     });
     $(".item-slider.internal").slick({
         slidesToShow: 4,
         slidesToScroll: 4,
-        dots: false
+        dots: false,
+        infinite: false
     });
 
     $(".search-toggle").on("click", function (e) {
