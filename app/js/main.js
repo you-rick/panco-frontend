@@ -107,10 +107,27 @@ $(function () {
         $(this).closest(".cart").toggleClass("active");
     });
 
-    $(".topnav-toggle").on("click", function() {
+    $(".topnav-toggle").on("click", function () {
         $(this).toggleClass("active");
         $(".mobile-nav").toggleClass("shown");
     });
+
+
+    $(".mobile-nav a.parent").on("click", function (e) {
+        e.preventDefault();
+        $(this).siblings(".submenu").addClass("shown");
+        $(".mobile-nav").scrollTop(0);
+    });
+
+    $(".mobile-nav a.back").on("click", function (e) {
+        e.preventDefault();
+        $(this).closest(".submenu").removeClass("shown");
+    });
+
+    $(".mobile-nav .dropdown-toggle").on("click", function (e) {
+        e.preventDefault();
+        $(this).closest(".dropdown-box").toggleClass("shown");
+    })
 });
 
 

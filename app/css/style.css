@@ -1063,6 +1063,119 @@ h1, h2, h3 {
         font-size: 0.75rem;
         line-height: 1.125rem; }
 
+.mobile-nav {
+  width: 300px;
+  top: 64px;
+  left: 0;
+  position: fixed;
+  z-index: 9;
+  height: calc(100vh - 64px);
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  transform: translate(-340px, 0);
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+  @media only screen and (min-width: 1024px) {
+    .mobile-nav {
+      display: none !important; } }
+  .mobile-nav.shown {
+    pointer-events: auto;
+    transform: translate(0, 0); }
+  .mobile-nav .main-menu {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; }
+    .mobile-nav .main-menu li a {
+      width: 100%;
+      height: 52px;
+      padding: 0 18px 0 24px;
+      display: flex;
+      background: #fff;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #DDDDDD;
+      color: #000;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.01em; }
+      .mobile-nav .main-menu li a.purple {
+        background: #65226D;
+        color: #fff;
+        border-bottom: 0; }
+      .mobile-nav .main-menu li a.main-item {
+        font: bold 14px/17px "Ultima Pro", "Poppins", "Rubik", sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase; }
+      .mobile-nav .main-menu li a.login .icon-person {
+        font-size: 1.25rem;
+        margin-right: 8px; }
+      .mobile-nav .main-menu li a.login span {
+        display: flex;
+        align-items: center; }
+      .mobile-nav .main-menu li a.favorites {
+        justify-content: flex-start; }
+        .mobile-nav .main-menu li a.favorites [class*="icon"] {
+          color: #65226D;
+          font-size: 24px;
+          margin-right: 10px; }
+      .mobile-nav .main-menu li a.grey {
+        background: #F9F9F9; }
+      .mobile-nav .main-menu li a.back {
+        justify-content: flex-start;
+        font: bold 14px/17px "Ultima Pro", "Poppins", "Rubik", sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase; }
+        .mobile-nav .main-menu li a.back [class*="icon"] {
+          margin-right: 10px; }
+      .mobile-nav .main-menu li a.red {
+        color: #E3483E; }
+      .mobile-nav .main-menu li a.dropdown-toggle [class*="icon"] {
+        font-size: 20px;
+        transform: rotate(0deg);
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out; }
+      .mobile-nav .main-menu li a .icon-arrow_right,
+      .mobile-nav .main-menu li a .icon-arrow_left {
+        font-size: 14px; }
+    .mobile-nav .main-menu .dropdown-box.shown .dropdown-toggle [class*="icon"] {
+      transform: rotate(-45deg); }
+    .mobile-nav .main-menu .dropdown-box.shown .dropdown-list {
+      display: block; }
+    .mobile-nav .main-menu .dropdown-list {
+      display: none; }
+    .mobile-nav .main-menu .submenu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 100%;
+      background: #fff;
+      height: 100%;
+      pointer-events: none;
+      transform: translate(340px, 0);
+      -webkit-transition: all 0.15s ease-out;
+      -moz-transition: all 0.15s ease-out;
+      -o-transition: all 0.15s ease-out;
+      transition: all 0.15s ease-out; }
+      .mobile-nav .main-menu .submenu.shown {
+        pointer-events: auto;
+        transform: translate(0, 0); }
+  .mobile-nav .copyright {
+    padding: 16px 24px;
+    font-size: 11px;
+    line-height: 16px;
+    color: #5E5E5E;
+    margin-top: auto; }
+
 .mobile-header {
   position: fixed;
   top: 0;

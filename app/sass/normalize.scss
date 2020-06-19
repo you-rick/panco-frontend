@@ -27,7 +27,6 @@ time, mark, audio, video {
 }
 
 
-
 article,
 aside,
 details,
@@ -49,6 +48,10 @@ body {
   max-height: 100%;
   float: left;
   width: 100%;
+  @include font-smooth-retina {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 
@@ -56,6 +59,7 @@ body {
   @include box-sizing(border-box);
   outline: none;
 }
+
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
@@ -376,7 +380,9 @@ html input[disabled] {
  * 2. Remove excess padding in IE 8/9.
  */
 
-input, textarea {outline: none;}
+input, textarea {
+  outline: none;
+}
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -408,20 +414,31 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 
-*::-webkit-input-placeholder { color: #ccc;}
-*:-moz-placeholder { color: #ccc;}
-*::-moz-placeholder { color: #ccc;}
+*::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+*:-moz-placeholder {
+  color: #ccc;
+}
+
+*::-moz-placeholder {
+  color: #ccc;
+}
 
 
 [placeholder]:focus::-webkit-input-placeholder {
   opacity: 0 !important;
 }
+
 [placeholder]:focus:-moz-placeholder {
   opacity: 0;
 }
+
 [placeholder]:focus::-moz-placeholder {
   opacity: 0;
 }
+
 /**
  * Remove inner padding and border in Firefox 4+.
  */
@@ -458,6 +475,7 @@ table {
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   outline: none;
