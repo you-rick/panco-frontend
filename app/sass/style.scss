@@ -3,9 +3,18 @@
 @import "config/helpers";
 @import "chunks/components";
 
+.main-wrapper {
+  @include till-md-screen {
+    padding-top: 64px;
+  }
+}
+
 /* ============ Header ============ */
 .topbar {
   width: 100%;
+  @include till-md-screen {
+    display: none;
+  }
 
   .topbar-inner-wrap {
     width: 100%;
@@ -119,114 +128,21 @@
     }
 
     .cart-toggle {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: visible;
-
       [class*="icon"] {
         font-size: rem(24px);
-        color: $purple;
-      }
-
-      .number {
-        position: absolute;
-        top: rem(-6px);
-        right: rem(-6px);
-        background: $red;
-        border: 2px solid #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: rem(18px);
-        width: rem(18px);
-        font-size: rem(10px);
-        color: #fff;
-        @include radius(20px);
       }
     }
 
     .cart-dropdown {
-      display: none;
       width: rem(284px);
-      position: absolute;
-      top: rem(48px);
-      right: 0;
-      z-index: 5;
-      background: #fff;
-      border: 1px solid $mediumGrey;
-      padding: rem(20px);
-
-      .items {
-        margin-bottom: rem(24px);
-
-        li {
-        }
-
-        .item {
-          display: flex;
-          align-items: center;
-          color: #000;
-          margin-bottom: rem(14px);
-
-          img {
-            width: rem(96px);
-            margin-right: rem(12px);
-          }
-
-          .info {
-            display: flex;
-            flex-direction: column;
-            font-size: rem(12px);
-
-            .title {
-              line-height: rem(18px);
-              margin-bottom: rem(4px);
-            }
-
-            .size {
-              line-height: rem(18px);
-              margin-bottom: rem(4px);
-              color: $greyText;
-            }
-
-            .price {
-              display: flex;
-              line-height: rem(18px);
-              font: bold rem(12px)/rem(15px) $headlineFont;
-              color: $purple;
-
-              .new {
-                color: $red;
-              }
-
-              .old {
-                text-decoration: line-through;
-                color: $darkGrey;
-                margin-right: rem(12px);
-              }
-            }
-          }
-        }
-      }
-
-      .items-added {
-        text-align: center;
-        font-size: rem(12px);
-        line-height: rem(18px);
-        color: $darkGrey;
-        margin-bottom: rem(8px);
-      }
-
-      .button {
-      }
     }
   }
 }
 
 .main-header-wrap {
-  height: rem(70px);
+  @include from-md-screen {
+    height: rem(70px);
+  }
 }
 
 .main-header {
@@ -236,6 +152,9 @@
   background: #fff;
   border-top: 1px solid $mediumGrey;
   border-bottom: 1px solid $mediumGrey;
+  @include till-md-screen {
+    display: none;
+  }
 
   &.fixed {
     position: fixed;
@@ -403,6 +322,134 @@
   }
 }
 
+.mobile-nav {
+  @include from-md-screen {
+    display: none;
+  }
+}
+
+.mobile-header {
+  @include from-md-screen {
+    display: none;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background: #fff;
+  height: 64px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .topnav-toggle {
+    padding: 8px 4px;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+
+    .lines {
+      position: relative;
+      width: 24px;
+      height: 16px;
+    }
+
+    .line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      @include smooth(0.2s);
+
+      &.first {
+        top: 0;
+      }
+
+      &.second {
+        top: 6px;
+      }
+
+      &.third {
+        top: 6px;
+      }
+
+      &.fourth {
+        top: 12px;
+      }
+    }
+
+    &.active {
+      .line {
+        &.first {
+          top: 12px;
+          width: 0%;
+          left: 50%;
+        }
+
+        &.second {
+          top: 6px;
+          transform: rotate(45deg);
+        }
+
+        &.third {
+          top: 6px;
+          transform: rotate(-45deg);
+        }
+
+        &.fourth {
+          top: 12px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+
+
+    }
+  }
+
+  .logo {
+    font: 900 24px/1 $headlineFont;
+    color: $purple;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    padding-top: 4px;
+  }
+
+  .search-toggle {
+    font-size: 30px;
+    color: $purple;
+    line-height: 1;
+    margin-right: 12px;
+  }
+
+  .cart-dropdown {
+    top: 64px;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .cart-toggle {
+    [class*="icon"] {
+      font-size: 30px;
+    }
+  }
+
+}
+
 .combobox {
   display: none;
   position: fixed;
@@ -509,6 +556,10 @@
   left: 0;
   padding-bottom: rem(16px);
 
+  @include till-md-screen {
+    top: 64px !important;
+  }
+
   &.shown {
     display: block;
   }
@@ -530,6 +581,9 @@
       font: 400 rem(24px)/rem(36px) $baseFont;
       letter-spacing: -0.01em;
       padding: rem(8px) 0;
+      @include till-md-screen {
+        font-size: 20px;
+      }
     }
 
     .icon-close {

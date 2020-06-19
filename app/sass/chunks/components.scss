@@ -476,6 +476,119 @@ h1, h2, h3 {
   }
 }
 
+.cart {
+  &.active {
+    .cart-dropdown {
+      display: block;
+    }
+  }
+}
+
+.cart-toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+
+  [class*="icon"] {
+    font-size: rem(24px);
+    color: $purple;
+  }
+
+  .number {
+    position: absolute;
+    top: rem(-6px);
+    right: rem(-6px);
+    background: $red;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(18px);
+    width: rem(18px);
+    font-size: rem(10px);
+    color: #fff;
+    @include radius(20px);
+  }
+}
+
+.cart-dropdown {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: rem(48px);
+  right: 0;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid $mediumGrey;
+  padding: rem(20px);
+
+  .items {
+    margin-bottom: rem(24px);
+
+    li {
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      color: #000;
+      margin-bottom: rem(14px);
+
+      img {
+        width: rem(96px);
+        margin-right: rem(12px);
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        font-size: rem(12px);
+
+        .title {
+          line-height: rem(18px);
+          margin-bottom: rem(4px);
+        }
+
+        .size {
+          line-height: rem(18px);
+          margin-bottom: rem(4px);
+          color: $greyText;
+        }
+
+        .price {
+          display: flex;
+          line-height: rem(18px);
+          font: bold rem(12px)/rem(15px) $headlineFont;
+          color: $purple;
+
+          .new {
+            color: $red;
+          }
+
+          .old {
+            text-decoration: line-through;
+            color: $darkGrey;
+            margin-right: rem(12px);
+          }
+        }
+      }
+    }
+  }
+
+  .items-added {
+    text-align: center;
+    font-size: rem(12px);
+    line-height: rem(18px);
+    color: $darkGrey;
+    margin-bottom: rem(8px);
+  }
+
+  .button {
+  }
+}
+
 
 .filter-list {
   li {
