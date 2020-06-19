@@ -860,7 +860,7 @@ h1, h2, h3 {
       position: absolute;
       top: 3rem;
       right: 0;
-      z-index: 3;
+      z-index: 5;
       background: #fff;
       border: 1px solid #DDDDDD;
       padding: 1.25rem; }
@@ -1091,7 +1091,7 @@ h1, h2, h3 {
   display: none;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: #fff;
   top: 7.375rem;
   left: 0;
@@ -1334,12 +1334,35 @@ h1, h2, h3 {
       margin: 0 1rem; }
   .products-header .filter-toggle {
     display: flex;
+    position: relative;
+    z-index: 3;
     align-items: center;
     font-size: 1rem;
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    transform: translate(0, 0);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    cursor: pointer; }
+    .products-header .filter-toggle.active {
+      transform: translate(-9.25rem, 0); }
+      .products-header .filter-toggle.active [class*="icon"] {
+        transform: rotate(-45deg); }
+      .products-header .filter-toggle.active span.hide {
+        display: block; }
+      .products-header .filter-toggle.active span.show {
+        display: none; }
     .products-header .filter-toggle [class*="icon"] {
       font-size: 1.5rem;
-      margin-right: 0.5rem; }
+      margin-right: 0.5rem;
+      transform: rotate(0deg);
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out; }
+    .products-header .filter-toggle span.hide {
+      display: none; }
 
 .filter-wrapper {
   width: 18.75rem;
@@ -1359,7 +1382,7 @@ h1, h2, h3 {
   transition: all 0.2s ease-out; }
   .filter-wrapper .filter-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 2.125rem; }
   .filter-wrapper .clear-filter {
@@ -1420,12 +1443,13 @@ h1, h2, h3 {
       width: 100%; }
 
 .product-info {
-  width: 36%; }
+  width: 26%; }
   .product-info .section-headline {
     font-size: 1.75rem; }
   .product-info .price {
     font: bold 1rem/1.25rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
     color: #65226D;
     display: flex; }
     .product-info .price .old {

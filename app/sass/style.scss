@@ -153,7 +153,7 @@
       position: absolute;
       top: rem(48px);
       right: 0;
-      z-index: 3;
+      z-index: 5;
       background: #fff;
       border: 1px solid $mediumGrey;
       padding: rem(20px);
@@ -503,7 +503,7 @@
   display: none;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: #fff;
   top: rem(118px);
   left: 0;
@@ -646,6 +646,7 @@
   .slider-container {
     margin: 0 rem(-10px);
     overflow: hidden;
+
     &.no-dots {
       .slick-dots {
         display: none !important;
@@ -861,16 +862,44 @@
 
   .filter-toggle {
     display: flex;
+    position: relative;
+    z-index: 3;
     align-items: center;
     font-size: rem(16px);
     line-height: rem(24px);
+    transform: translate(0, 0);
+    @include smooth(0.2s);
+    cursor: pointer;
+
+    &.active {
+      transform: translate(rem(-148px), 0);
+
+      [class*="icon"] {
+        transform: rotate(-45deg);
+      }
+
+      span {
+        &.hide {
+          display: block;
+        }
+
+        &.show {
+          display: none;
+        }
+      }
+    }
 
     [class*="icon"] {
       font-size: rem(24px);
       margin-right: rem(8px);
+      transform: rotate(0deg);
+      @include smooth(0.25s);
     }
 
     span {
+      &.hide {
+        display: none;
+      }
     }
   }
 }
@@ -892,7 +921,7 @@
 
   .filter-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: rem(34px);
   }
@@ -954,6 +983,7 @@
       align-items: center;
       position: relative;
       margin-bottom: rem(14px);
+
       &:after {
         content: "";
         display: block;
@@ -984,7 +1014,7 @@
 }
 
 .product-info {
-  width: 36%;
+  width: 26%;
 
   .section-headline {
     font-size: rem(28px);
@@ -992,7 +1022,8 @@
 
   .price {
     font: bold rem(16px)/rem(20px) $headlineFont;
-    margin-top: rem(8px);
+    margin-top: rem(4px);
+    margin-bottom: rem(8px);
     color: $purple;
     display: flex;
 

@@ -1,8 +1,13 @@
 $(function () {
-    $(".item-slider").slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
+    $(".item-slider.home").slick({
+        slidesToShow: $(this).attr("data-slides") || 3,
+        slidesToScroll: $(this).attr("data-slides") || 3,
         dots: true
+    });
+    $(".item-slider.internal").slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false
     });
 
     $(".search-toggle").on("click", function (e) {
@@ -44,6 +49,7 @@ $(function () {
 
     $(".filter-toggle").on("click", function (e) {
         e.preventDefault();
+        $(this).toggleClass("active");
         $(".products").toggleClass("filter-shown");
     });
 
@@ -78,14 +84,3 @@ $(function () {
 });
 
 
-
-/*
-
-стрелки - увеличить
-точки - убрать везде кроме главной
-менюшка - шарики по размеру
-
-
-
-
- */
