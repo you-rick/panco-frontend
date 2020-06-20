@@ -26,6 +26,7 @@ $(function () {
     $(".search-toggle").on("click", function (e) {
         e.preventDefault();
         $(".search-dropdown").toggleClass("shown");
+        $(".search-toggle.open").toggleClass("active");
     });
 
     $(".scroll-top").on("click", function (e) {
@@ -55,12 +56,9 @@ $(function () {
     });
 
     $('body').on('click', function (e) {
+        console.log(e.target);
         if ($(e.target).closest('.custom-dropdown').length === 0) {
             $(".custom-dropdown").removeClass("active");
-        }
-        if ($(e.target).closest('.mobile-nav').length === 0) {
-            //$(".mobile-nav.submenu").removeClass("shown");
-            //$(".mobile-nav").removeClass("shown");
         }
     });
 
@@ -113,6 +111,8 @@ $(function () {
     $(".topnav-toggle").on("click", function () {
         $(this).toggleClass("active");
         $(".mobile-nav").toggleClass("shown").scrollTop(0);
+        $("body").toggleClass("menu-shown");
+        $(".mobile-nav-overlay").toggleClass("shown");
     });
 
 

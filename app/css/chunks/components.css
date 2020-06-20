@@ -76,6 +76,8 @@ h1, h2, h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 -1rem 5rem; }
+  .grid-container.cols_1 > *, .grid-container[data-rows="1"] > * {
+    flex: 0 1 100%; }
   .grid-container.cols_2 > *, .grid-container[data-rows="2"] > * {
     flex: 0 1 50%; }
   .grid-container.cols_3 > *, .grid-container[data-rows="3"] > * {
