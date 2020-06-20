@@ -1085,6 +1085,8 @@ h1, h2, h3 {
   .mobile-nav.shown {
     pointer-events: auto;
     transform: translate(0, 0); }
+  .mobile-nav.submenu-shown {
+    overflow: hidden; }
   .mobile-nav .main-menu {
     width: 100%;
     position: relative;
@@ -1159,7 +1161,9 @@ h1, h2, h3 {
       z-index: 1;
       width: 100%;
       background: #fff;
-      height: 100%;
+      height: calc(100vh - 64px);
+      overflow-x: hidden;
+      overflow-y: auto;
       pointer-events: none;
       transform: translate(340px, 0);
       -webkit-transition: all 0.15s ease-out;
@@ -1168,7 +1172,9 @@ h1, h2, h3 {
       transition: all 0.15s ease-out; }
       .mobile-nav .main-menu .submenu.shown {
         pointer-events: auto;
-        transform: translate(0, 0); }
+        transform: translate(0, 0);
+        overflow-y: auto;
+        overflow-x: hidden; }
   .mobile-nav .copyright {
     padding: 16px 24px;
     font-size: 11px;

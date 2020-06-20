@@ -346,6 +346,10 @@
     transform: translate(0, 0);
   }
 
+  &.submenu-shown {
+    overflow: hidden;
+  }
+
   .main-menu {
     width: 100%;
     position: relative;
@@ -473,7 +477,10 @@
       z-index: 1;
       width: 100%;
       background: #fff;
-      height: 100%;
+      height: calc(100vh - 64px);
+
+      overflow-x: hidden;
+      overflow-y: auto;
 
       pointer-events: none;
       transform: translate(340px, 0);
@@ -482,6 +489,8 @@
       &.shown {
         pointer-events: auto;
         transform: translate(0, 0);
+        overflow-y: auto;
+        overflow-x: hidden;
       }
     }
   }
