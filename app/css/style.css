@@ -1309,7 +1309,8 @@ body.menu-shown {
   .mobile-header .cart-dropdown {
     top: 64px;
     border-left: 0;
-    border-right: 0; }
+    border-right: 0;
+    border-top: 0; }
   .mobile-header .cart-toggle [class*="icon"] {
     font-size: 30px; }
 

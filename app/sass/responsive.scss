@@ -80,6 +80,23 @@
   }
 
   /* ============ Product ============ */
+  .grid-container.grid-container {
+    &.cols_2, &[data-rows="2"],
+    &.cols_3, &[data-rows="3"],
+    &.cols_4, &[data-rows="4"] {
+      .grid-item {
+        flex: 0 1 50%;
+        font-size: 14px;
+
+        .save-item {
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  /* ============ Product ============ */
   .product-details {
     flex-direction: column;
     margin-top: 20px;

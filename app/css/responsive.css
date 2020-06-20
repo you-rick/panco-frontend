@@ -36,6 +36,13 @@
   .featured-items .featured-item .item-info .button {
     margin-top: auto; }
   /* ============ Product ============ */
+  .grid-container.grid-container.cols_2 .grid-item, .grid-container.grid-container[data-rows="2"] .grid-item, .grid-container.grid-container.cols_3 .grid-item, .grid-container.grid-container[data-rows="3"] .grid-item, .grid-container.grid-container.cols_4 .grid-item, .grid-container.grid-container[data-rows="4"] .grid-item {
+    flex: 0 1 50%;
+    font-size: 14px; }
+    .grid-container.grid-container.cols_2 .grid-item .save-item, .grid-container.grid-container[data-rows="2"] .grid-item .save-item, .grid-container.grid-container.cols_3 .grid-item .save-item, .grid-container.grid-container[data-rows="3"] .grid-item .save-item, .grid-container.grid-container.cols_4 .grid-item .save-item, .grid-container.grid-container[data-rows="4"] .grid-item .save-item {
+      bottom: 10px;
+      right: 10px; }
+  /* ============ Product ============ */
   .product-details {
     flex-direction: column;
     margin-top: 20px; }
