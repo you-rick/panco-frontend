@@ -27,7 +27,7 @@
 
 
 @include till-md-screen {
-  /* ============ Header ============ */
+  /* ================== Header =============== */
 
 
   /* ============ Home components ============ */
@@ -79,7 +79,7 @@
     }
   }
 
-  /* ============ Product ============ */
+  /* ================ Product ================ */
   .grid-container.grid-container {
     &.cols_2, &[data-rows="2"],
     &.cols_3, &[data-rows="3"],
@@ -96,7 +96,7 @@
     }
   }
 
-  /* ============ Product ============ */
+  /* ================ Product ================ */
   .product-details {
     flex-direction: column;
     margin-top: 20px;
@@ -259,7 +259,7 @@
     }
   }
 
-  /* ============ Footer ============ */
+  /* ================= Footer ================= */
   .main-footer {
     padding-top: 24px;
 
