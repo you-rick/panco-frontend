@@ -134,6 +134,9 @@
         display: none; }
       .product-details .product-info .price {
         font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 6px; }
+      .product-details .product-info .data-label {
         margin-top: 0; }
       .product-details .product-info .section-headline {
         font-size: 24px;
