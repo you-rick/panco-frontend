@@ -1186,11 +1186,14 @@
     position: relative;
     z-index: 3;
     align-items: center;
-    font-size: rem(16px);
     line-height: rem(24px);
     transform: translate(0, 0);
     @include smooth(0.2s);
     cursor: pointer;
+
+    @include from-md-screen {
+      font-size: rem(16px);
+    }
 
     &.active {
       transform: translate(rem(-148px), 0);
