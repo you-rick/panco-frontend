@@ -99,6 +99,7 @@ $(function () {
         var $parent = $(this).closest(".custom-dropdown");
         $("#grid_container").attr("data-rows", number);
         $parent.find(".col-number-label").text(number);
+        $parent.removeClass("active");
     });
 
     $(window).on("orientationchange", function () {
