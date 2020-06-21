@@ -26,6 +26,10 @@ h1, h2, h3 {
 .section-headline {
   font: 700 1.5rem/1.875rem "Ultima Pro", "Poppins", "Rubik", sans-serif;
   letter-spacing: -0.02em; }
+  @media only screen and (max-width: 1023px) {
+    .section-headline {
+      font-size: 20px;
+      line-height: 25px; } }
 
 .button {
   height: 3.125rem;
@@ -76,6 +80,10 @@ h1, h2, h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 -1rem 5rem; }
+  @media only screen and (max-width: 1023px) {
+    .grid-container {
+      margin-left: -5px;
+      margin-right: -5px; } }
   .grid-container.cols_1 > *, .grid-container[data-rows="1"] > * {
     flex: 0 1 100%; }
   .grid-container.cols_2 > *, .grid-container[data-rows="2"] > * {
@@ -90,6 +98,10 @@ h1, h2, h3 {
   flex-direction: column;
   font-size: 1rem;
   padding: 1rem; }
+  @media only screen and (max-width: 1023px) {
+    .grid-item {
+      padding: 5px;
+      margin-bottom: 20px; } }
   @media screen and (min-width: 1921px) {
     .grid-item {
       font-size: 1.125rem; } }
@@ -180,12 +192,21 @@ h1, h2, h3 {
     pointer-events: auto;
     z-index: 3;
     transform: translate(0, 0); }
+  .custom-dropdown.as-button .dropdown-list {
+    top: 52px;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1); }
   .custom-dropdown .dropdown-toggle {
     display: flex;
     align-items: center;
-    font-size: 1rem;
     line-height: 1.5rem;
-    padding: 0.5rem 0; }
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+    @media only screen and (min-width: 1024px) {
+      .custom-dropdown .dropdown-toggle {
+        font-size: 1rem; } }
     .custom-dropdown .dropdown-toggle [class*="icon"] {
       font-size: 1.5rem;
       margin-right: 0.125rem;

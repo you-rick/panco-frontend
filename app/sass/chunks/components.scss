@@ -32,6 +32,10 @@ h1, h2, h3 {
 .section-headline {
   font: 700 rem(24px)/rem(30px) $headlineFont;
   letter-spacing: -0.02em;
+  @include till-md-screen {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .button {
@@ -108,6 +112,10 @@ h1, h2, h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 rem(-16px) 5rem;
+  @include till-md-screen {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
 
   &.cols_1, &[data-rows="1"] {
     & > * {
@@ -140,6 +148,10 @@ h1, h2, h3 {
   flex-direction: column;
   font-size: rem(16px);
   padding: rem(16px);
+  @include till-md-screen {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
 
   @media screen and (min-width: 1921px) {
     font-size: rem(18px);
@@ -271,12 +283,23 @@ h1, h2, h3 {
     }
   }
 
+  &.as-button {
+    .dropdown-list {
+      top: 52px;
+      width: 100%;
+      @include shadow(2px 2px 3px 0 rgba(0, 0, 0, 0.1));
+    }
+  }
+
   .dropdown-toggle {
     display: flex;
     align-items: center;
-    font-size: rem(16px);
     line-height: rem(24px);
-    padding: rem(8px) 0;
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+    @include from-md-screen {
+      font-size: rem(16px);
+    }
 
     [class*="icon"] {
       font-size: rem(24px);

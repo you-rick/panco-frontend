@@ -408,7 +408,7 @@
     <!-- /.mobile-nav -->
 
     <div class="site-container o-hidden">
-        <main class="products">
+        <main class="products-wrapper">
             <header class="products-header">
                 <div class="col flex-parent flex-column">
                     <nav class="breadcrumbs">
@@ -421,7 +421,7 @@
                     <h1 class="section-headline">Girls' T-shirts</h1>
                 </div>
                 <!-- /.col -->
-                <div class="col">
+                <div class="col hide-md-mobile">
                     <div class="custom-dropdown">
                         <button class="dropdown-toggle">
                             <i class="icon-down"></i>
@@ -434,33 +434,55 @@
                             <li><a href="#">Newest</a></li>
                         </ul>
                     </div>
-                    <div class="custom-dropdown">
+                    <div class="custom-dropdown rows">
                         <button class="dropdown-toggle">
                             <i class="icon-down"></i>
-                            <span>See: <span id="col_number_label">4</span> rows</span>
+                            <span>See: <span class="col-number-label" data-default="4">4</span> rows</span>
                         </button>
                         <ul class="dropdown-list">
                             <li>
                                 <button type="button" class="toggle-rows" data-row="3">3 rows</button>
                             </li>
                             <li>
-                                <button type="button" class="toggle-rows" data-row="4">4 rows</button>
+                                <button type="button" class="toggle-rows default" data-row="4">4 rows</button>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- /.col -->
-                <div class="col">
+                <div class="col mobile-filters hide-md-desktop">
+                    <div class="custom-dropdown rows as-button">
+                        <button class="dropdown-toggle button block grey p-0">
+                            <i class="icon-down"></i>
+                            <span>See: <span class="col-number-label" data-default="2">2</span> rows</span>
+                        </button>
+                        <ul class="dropdown-list">
+                            <li>
+                                <button type="button" class="toggle-rows" data-row="1">1 row</button>
+                            </li>
+                            <li>
+                                <button type="button" class="toggle-rows default" data-row="2">2 rows</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="button purple p-0">
+                        <i class="icon-plus-outline"></i>
+                        <span>Show Filters</span>
+                    </button>
+                </div>
+                <!-- /.col -->
+                <div class="col hide-md-mobile">
                     <button class="filter-toggle">
                         <i class="icon-plus-outline"></i>
                         <span class="show">Show Filters</span>
                         <span class="hide">Hide Filters</span>
                     </button>
                 </div>
+                <!-- /.col -->
             </header>
             <!-- /.products-header -->
 
-            <div id="grid_container" class="grid-container" data-rows="4">
+            <div id="grid_container" class="grid-container products" data-rows="4">
                 <div class="grid-item">
                     <div class="img-wrap">
                         <img src="images/grid-item.jpg" class="photo" alt="Item"/>
