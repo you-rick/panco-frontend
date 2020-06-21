@@ -111,7 +111,7 @@ $(function () {
 
 
     if ($(".item-slider-photo").length > 5) {
-        $(".product-slider").slick({
+        $(".product-slider.desktop").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             dots: false,
