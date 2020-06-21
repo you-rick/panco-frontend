@@ -83,8 +83,15 @@ $(function () {
 
     $(".filter-toggle").on("click", function (e) {
         e.preventDefault();
-        $(this).toggleClass("active");
+        $(".filter-toggle.desktop").toggleClass("active");
+
         $(".products-wrapper").toggleClass("filter-shown");
+        $(".filter-wrapper").toggleClass("shown");
+        $(".filter-overlay").toggleClass("shown");
+    });
+
+    $(".filter-overlay").on("click", function (e) {
+        $(".filter-toggle").trigger("click");
     });
 
     $(".toggle-rows").on("click", function () {

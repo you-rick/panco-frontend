@@ -41,6 +41,56 @@
     .grid-container.products .grid-item .save-item {
       bottom: 10px;
       right: 10px; }
+  .filter-overlay {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .filter-overlay.shown {
+      background: rgba(0, 0, 0, 0.2);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; }
+  .filter-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 12;
+    width: 316px;
+    height: 100vh;
+    padding: 0;
+    background: #fff;
+    transform: translate(340px, 0);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out; }
+    .filter-wrapper.shown {
+      transform: translate(0, 0); }
+    .filter-wrapper .filter-header {
+      height: 64px;
+      width: 100%;
+      padding: 0 18px;
+      background: #F3F3F3;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0; }
+      .filter-wrapper .filter-header .filter-toggle {
+        color: #65226D; }
+      .filter-wrapper .filter-header .clear-filter {
+        color: #000; }
+    .filter-wrapper .filter-body {
+      padding: 20px 40px; }
   /* ================ Products ================ */
   .products-header {
     flex-direction: column;

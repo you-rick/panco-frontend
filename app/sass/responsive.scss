@@ -91,6 +91,63 @@
     }
   }
 
+  .filter-overlay {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    @include smooth(0.2s);
+
+    &.shown {
+      background: rgba(0, 0, 0, 0.2);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+  .filter-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 12;
+    width: 316px;
+    height: 100vh;
+    padding: 0;
+    background: #fff;
+    transform: translate(340px, 0);
+    @include smooth(0.15s);
+
+    &.shown {
+      transform: translate(0, 0);
+    }
+
+    .filter-header {
+      height: 64px;
+      width: 100%;
+      padding: 0 18px;
+      background: $grey;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+      .filter-toggle {
+        color: $purple;
+      }
+      .clear-filter {
+        color: #000;
+      }
+    }
+
+    .filter-body {
+      padding: 20px 40px;
+    }
+  }
+
   /* ================ Products ================ */
   .products-header {
     flex-direction: column;
@@ -157,6 +214,7 @@
       .breadcrumbs {
         display: none;
       }
+
       .price {
         font-size: 14px;
         margin-top: 0;

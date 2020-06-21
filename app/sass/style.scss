@@ -1133,12 +1133,14 @@
   }
 
   &.filter-shown {
-    .grid-container {
-      padding-right: rem(300px);
+    @include from-md-screen {
+      .grid-container {
+        padding-right: rem(300px);
 
-      &[data-rows="4"] {
-        & > * {
-          flex: 0 1 33.33%;
+        &[data-rows="4"] {
+          & > * {
+            flex: 0 1 33.33%;
+          }
         }
       }
     }
