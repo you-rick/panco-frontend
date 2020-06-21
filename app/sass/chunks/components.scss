@@ -506,9 +506,20 @@ h1, h2, h3 {
 }
 
 .cart {
-  &.active {
-    .cart-dropdown {
-      display: block;
+  @include till-md-screen {
+    &.active {
+      .cart-dropdown {
+        display: block;
+      }
+    }
+  }
+  @include from-md-screen {
+    &:hover {
+      .cart-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+      }
     }
   }
 }
@@ -543,15 +554,24 @@ h1, h2, h3 {
 }
 
 .cart-dropdown {
-  display: none;
   width: 100%;
   position: absolute;
   top: rem(48px);
   right: 0;
-  z-index: 5;
+  z-index: 7;
   background: #fff;
   border: 1px solid $mediumGrey;
   padding: rem(20px);
+
+  @include till-md-screen {
+    display: none;
+  }
+  @include from-md-screen {
+    visibility: hidden;
+    opacity: 0;
+    @include smooth(0.05s);
+    transition-delay: 0.5s;
+  }
 
   .items {
     margin-bottom: rem(24px);

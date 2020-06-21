@@ -107,7 +107,8 @@
       .products-header .col.mobile-filters > * {
         margin: 0 10px;
         flex-grow: 1;
-        width: calc(50% - 20px); }
+        width: calc(50% - 20px);
+        z-index: 1; }
   /* ================ Product ================ */
   .product-details {
     flex-direction: column;

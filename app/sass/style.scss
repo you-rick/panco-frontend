@@ -128,12 +128,6 @@
     align-items: center;
     justify-content: center;
 
-    &:hover {
-      .cart-dropdown {
-        display: block;
-      }
-    }
-
     .cart-toggle {
       [class*="icon"] {
         font-size: rem(24px);
