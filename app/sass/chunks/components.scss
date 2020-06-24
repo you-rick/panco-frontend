@@ -197,10 +197,14 @@ h1, h2, h3 {
     .save-item {
       position: absolute;
       z-index: 1;
-      bottom: em(20px);
-      right: em(20px);
+      bottom: rem(16px);
+      right: rem(20px);
       font-size: em(20px);
       color: $purple;
+
+      i {
+        padding: 2px;
+      }
     }
   }
 
@@ -287,7 +291,7 @@ h1, h2, h3 {
     .dropdown-list {
       top: 52px;
       width: 100%;
-      @include shadow(2px 2px 3px 0 rgba(0, 0, 0, 0.1));
+      //@include shadow(2px 2px 3px 0 rgba(0, 0, 0, 0.1));
     }
   }
 
@@ -333,7 +337,7 @@ h1, h2, h3 {
       a, button {
         display: block;
         width: 100%;
-        font-size: rem(12px);
+        font-size: rem(14px);
         line-height: rem(18px);
         background: #fff;
         color: #000;
@@ -585,9 +589,36 @@ h1, h2, h3 {
       color: #000;
       margin-bottom: rem(14px);
 
-      img {
+      &:hover {
+        .image:before {
+          border-color: #DDDDDD;
+        }
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         width: rem(96px);
         margin-right: rem(12px);
+        flex-shrink: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 3px solid transparent;
+          @include smooth(0.2s);
+        }
+      }
+
+      img {
+        max-width: 100%;
       }
 
       .info {

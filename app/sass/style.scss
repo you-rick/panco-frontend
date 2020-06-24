@@ -726,13 +726,10 @@
             font-size: rem(14px);
             font-weight: 600;
             line-height: rem(21px);
+            color: #000;
 
             &.red {
               color: $red;
-
-              &:hover {
-                color: $darkGrey;
-              }
             }
           }
         }
