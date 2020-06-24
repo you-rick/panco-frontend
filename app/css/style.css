@@ -1448,7 +1448,7 @@ h1, h2, h3 {
     .search-dropdown .form-search .field {
       width: 100%;
       border: 0;
-      font: 400 1.5rem/2.25rem "Poppins", "Rubik", sans-serif;
+      font: 500 1.5rem/2.25rem "Poppins", "Rubik", sans-serif;
       letter-spacing: -0.01em;
       padding: 0.5rem 0; }
       @media only screen and (max-width: 1023px) {
